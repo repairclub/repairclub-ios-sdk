@@ -18,51 +18,51 @@
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		lorCQ9spPCZFItaWtEYDD6/Q0T0=
+		L8bv0JRJMOmgZymQH31z9jVRyM0=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		iwzqO1yhZCTOECsCtNvNPeKJE7o=
+		XwVWtl/YrlVQDivOBdKdDNdQMcQ=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		unx4G5lZ6kb8x2OanqC66msSUuw=
+		8Jf9t3I2voRi+csmshKRHsCdWgs=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HB/qSHQmR2niJv1MdBj+LRaQrjM=
+		qXV1w3Qk7c1ur5Gs/KZHfEwKeoc=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		n7SJp7ArsdU3Hmd4u+wp4B+onJE=
+		aFn9Esw+0cItvexiFj2qtKLgs+w=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HB/qSHQmR2niJv1MdBj+LRaQrjM=
+		qXV1w3Qk7c1ur5Gs/KZHfEwKeoc=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		S3HcYTZv8xIKV9W93XtT0F2mDCo=
+		X+a4xYs5PVMK+lSR9EyhhnsRxqQ=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		unx4G5lZ6kb8x2OanqC66msSUuw=
+		8Jf9t3I2voRi+csmshKRHsCdWgs=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		0ayk8nfiB3muzgamtlIgdXaeIWg=
+		rKxwqjGARsgXHgG/7oGkFEjWk+U=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		houZBgFLKTEdYRmaXor9JjK3CFI=
+		TCh6iHooVh4gkQ26o4NK6rbImq4=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0ayk8nfiB3muzgamtlIgdXaeIWg=
+		rKxwqjGARsgXHgG/7oGkFEjWk+U=
 		</data>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FFvuaIVsyOt/lFeO2w8qC9yrHRA=
+		OZVJaQmCJc09hE+2OFLrl3ugs5o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wS8fsGw+t7T7SFD0Kw9ctJiFYzFS0LI9WO1yvoxfQpQ=
+			x3mBQX9HbgAZMsLokJWI+hHUvd28O5RoXj904fI1gqU=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D4UsvNxMJjNuTU/zcw67WPRYCHpiRq+xMq1HBApixzI=
+			FgNMbjSqq006R0/CEUXNrRbwS40jNFoLiTA2MlO+hRQ=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bslKblxPI2PEhpqyJJDFaFvPB3ZtwHp5erxqCToOMG8=
+			ejQEcP1Riju6o+hUjNrhoV7cvT2aeAc19ce91Gz6i5k=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZR9YCBpVwOFiZNAlfTsMdtKxSuXWNXUc4EksxITjz3c=
+			odTRMdlQFvwWpMdJ0aJzPBE7gSXEOkSuGQz2KunwqDc=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pw/bfD8Ify8jdCQivoFZ3/5FICGqHErTUDZwhFdNUyQ=
+			EoISaY2S6dNSFlY+9BGKaON9iILccALadt28E4t0PHU=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZR9YCBpVwOFiZNAlfTsMdtKxSuXWNXUc4EksxITjz3c=
+			odTRMdlQFvwWpMdJ0aJzPBE7gSXEOkSuGQz2KunwqDc=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RAWLTUlPzIL4800eNDfphMR64z/5Mg0t35xS/0DtIMg=
+			OE2mOt6djo1jUaJRJBuHbItj9r3nTne425uRCzfRm8I=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bslKblxPI2PEhpqyJJDFaFvPB3ZtwHp5erxqCToOMG8=
+			ejQEcP1Riju6o+hUjNrhoV7cvT2aeAc19ce91Gz6i5k=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yx/uSl+WmjHn4IJp62J8hMRgM/V/7jQVpaZLfbdoO6U=
+			HSj9TKxKpa6gIOWUAEuRwsbyJZ3l0U/+2VJqs2pa0TU=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8yzUErhK971PnrUmToOuJCKSPTHUIG7NhOPpfdGOYTs=
+			Dm70y21cXUOWsGb3d7Ce6mwQ/o7Jspe9z6ch4c66rSY=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yx/uSl+WmjHn4IJp62J8hMRgM/V/7jQVpaZLfbdoO6U=
+			HSj9TKxKpa6gIOWUAEuRwsbyJZ3l0U/+2VJqs2pa0TU=
 			</data>
 		</dict>
 		<key>Modules/RepairClubSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P2aVWvUYUB8rmE8pWzeFci9CHiexJLFN4+TbdjSuqX4=
+			iRVlbPLPSpK64TJj0OpyK2O98lmMpsjjooJ7vkUQjzg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

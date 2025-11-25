@@ -2528,7 +2528,6 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func startExtendedTroubleCodeScan(progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
-  final public func startTroubleCodeScan(type: RepairClubSDK.ScanType = .advanced, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void) async throws
   final public func stopTroubleCodeScan()
   final public func pvcop(input: Swift.Int, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -2544,8 +2543,6 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestRecalls(for vehicle: RepairClubSDK.VehicleEntry, completionHandler: @escaping (RepairClubSDK.Result<RepairClubSDK.VehicleRecallResults, any Swift.Error>) -> Swift.Void)
   final public func clearGenericCodes(completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   final public func clearAllCodes(progressHandler: @escaping (RepairClubSDK.OperationProgressUpdate) -> Swift.Void) throws
-  @discardableResult
-  final public func clearAllCodes() async throws -> _Concurrency.AsyncThrowingStream<RepairClubSDK.OperationProgressUpdate, any Swift.Error>
   final public func fetchAvailableServices(completion: @escaping (RepairClubSDK.ServiceOption) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   final public func fetchAvailableServices() -> [RepairClubSDK.ServiceAdvanced]?
