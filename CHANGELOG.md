@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.5] - 2025-11-25
+### Added
+- Added new error handling to the scanning and clear codes APIs
+- Added new logging to advanced operations like scanning and clear codes
+
+### Fixed
+- 
+
 ## [1.5.4] - 2025-11-11
 ### Added
 - Updates to add better support for trims

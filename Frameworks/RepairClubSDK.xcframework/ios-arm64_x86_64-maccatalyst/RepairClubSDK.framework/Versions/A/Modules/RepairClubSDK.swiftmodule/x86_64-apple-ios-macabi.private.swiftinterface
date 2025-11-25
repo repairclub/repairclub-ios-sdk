@@ -42,7 +42,7 @@ public struct ScanEntry : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swi
   public var startTime: Foundation.Date?
   public var endTime: Foundation.Date?
   public var scanTime: Swift.Int?
-  public var status: RepairClubSDK.Status
+  public var status: RepairClubSDK.OperationStatus
   public var configType: Swift.String?
   public var sessionId: Swift.String
   public var deviceId: Swift.String
@@ -536,6 +536,7 @@ public enum ErrorLevel : Swift.String, Swift.Codable {
 }
 public enum CommonError : Swift.Error, Swift.Codable {
   case invalidDTCode(RepairClubSDK.ErrorLevel)
+  case deviceNotConnected(RepairClubSDK.ErrorLevel)
   case bundleNotFound(RepairClubSDK.ErrorLevel)
   case missingDTCode(RepairClubSDK.ErrorLevel)
   case unableToDecodeResponse(RepairClubSDK.ErrorLevel)
@@ -569,6 +570,8 @@ public enum CommonError : Swift.Error, Swift.Codable {
   case invalidToken(RepairClubSDK.ErrorLevel)
   case invalidFirmware(RepairClubSDK.ErrorLevel)
   case noScanFound(RepairClubSDK.ErrorLevel)
+  case noOperationFound(RepairClubSDK.ErrorLevel)
+  case commandFailed(RepairClubSDK.ErrorLevel)
   case noVINFound(RepairClubSDK.ErrorLevel)
   case VINTimeout(RepairClubSDK.ErrorLevel)
   case busSyncFailed(RepairClubSDK.ErrorLevel)
@@ -577,6 +580,7 @@ public enum CommonError : Swift.Error, Swift.Codable {
   case scanFailedZeroECUs(RepairClubSDK.ErrorLevel)
   case scanFailedTimedOut(RepairClubSDK.ErrorLevel)
   case scanEndedEarly(RepairClubSDK.ErrorLevel)
+  case scanAlreadyInProgress(RepairClubSDK.ErrorLevel)
   case regularError(any Swift.Error, RepairClubSDK.ErrorLevel)
   case freezeFrameUnsupported(RepairClubSDK.ErrorLevel)
   case freezeFrameError(RepairClubSDK.ErrorLevel)
@@ -1389,8 +1393,11 @@ public struct AVValueRecord : Swift.Codable, Swift.Hashable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum Status : Swift.String, Swift.Codable, Swift.Sendable {
-  case notStarted, started, ended, complete
+public enum OperationStatus : Swift.String, Swift.Codable, Swift.Sendable {
+  case notStarted
+  case started
+  case ended
+  case complete
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -1399,7 +1406,7 @@ public enum Status : Swift.String, Swift.Codable, Swift.Sendable {
     get
   }
 }
-extension RepairClubSDK.Status {
+extension RepairClubSDK.OperationStatus {
   public var description: Swift.String {
     get
   }
@@ -1537,6 +1544,7 @@ public enum SampleVehicle : Swift.String, Swift.Codable, Swift.CaseIterable {
   case volkswagenGolfGTI2022
   case chevroletMalibu2022
   case chevroletSuburban2023
+  case fordF1502018
   public var description: Swift.String {
     get
   }
@@ -1613,6 +1621,9 @@ public enum DeviceConnectionState : Swift.Codable {
   case demo
   case backgroundConnected
   case unknown
+  public var isDeviceConnected: Swift.Bool {
+    get
+  }
   public static func == (a: RepairClubSDK.DeviceConnectionState, b: RepairClubSDK.DeviceConnectionState) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public func hash(into hasher: inout Swift.Hasher)
@@ -2396,6 +2407,13 @@ public struct FirmwareReleaseDetailsInternal : Swift.Decodable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct RepairClubAPIResponse : Swift.Codable {
+  public let status: Swift.Int
+  public let message: Swift.String?
+  public let payload: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers final public class RepairClubManager : Combine.ObservableObject {
   public static let shared: RepairClubSDK.RepairClubManager
   final public var repairClubSdkVersion: Swift.String {
@@ -2510,6 +2528,7 @@ public struct FirmwareReleaseDetailsInternal : Swift.Decodable {
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func startExtendedTroubleCodeScan(progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
+  final public func startTroubleCodeScan(type: RepairClubSDK.ScanType = .advanced, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void) async throws
   final public func stopTroubleCodeScan()
   final public func pvcop(input: Swift.Int, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -2524,7 +2543,9 @@ public struct FirmwareReleaseDetailsInternal : Swift.Decodable {
   final public func requestModels(for makeID: Swift.Int, completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ModelResult], any Swift.Error>) -> Swift.Void)
   final public func requestRecalls(for vehicle: RepairClubSDK.VehicleEntry, completionHandler: @escaping (RepairClubSDK.Result<RepairClubSDK.VehicleRecallResults, any Swift.Error>) -> Swift.Void)
   final public func clearGenericCodes(completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
-  final public func clearAllCodes(progressHandler: @escaping (RepairClubSDK.OperationProgressUpdate) -> Swift.Void)
+  final public func clearAllCodes(progressHandler: @escaping (RepairClubSDK.OperationProgressUpdate) -> Swift.Void) throws
+  @discardableResult
+  final public func clearAllCodes() async throws -> _Concurrency.AsyncThrowingStream<RepairClubSDK.OperationProgressUpdate, any Swift.Error>
   final public func fetchAvailableServices(completion: @escaping (RepairClubSDK.ServiceOption) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   final public func fetchAvailableServices() -> [RepairClubSDK.ServiceAdvanced]?
@@ -2624,12 +2645,13 @@ public enum ScanProgressUpdate {
   case scanSucceeded(modules: [RepairClubSDK.ModuleItem], scanEntry: RepairClubSDK.ScanEntry, errors: [RepairClubSDK.ErrorEntry]?)
   case scanFailed(modules: [RepairClubSDK.ModuleItem], scanEntry: RepairClubSDK.ScanEntry, errors: [RepairClubSDK.ErrorEntry])
 }
-public enum OperationProgressUpdate {
+public enum OperationProgressUpdate : Swift.Sendable {
   case operationStarted
   case operationProgressUpdate(progress: Swift.Double)
   case operationInformation(text: Swift.String)
-  case operationSucceeded
-  case operationFailed(errors: [RepairClubSDK.ErrorEntry])
+  case operationModulesUpdate(modules: [RepairClubSDK.ModuleItem])
+  case operationSucceeded(modules: [RepairClubSDK.ModuleItem], errors: [RepairClubSDK.ErrorEntry]?)
+  case operationFailed(modules: [RepairClubSDK.ModuleItem], errors: [RepairClubSDK.ErrorEntry])
 }
 public struct OperationInfo {
 }
@@ -2847,9 +2869,9 @@ extension RepairClubSDK.LogMessageType : Swift.Hashable {}
 extension RepairClubSDK.OTAFirmwareUpdateLog.OTAStatus : Swift.Equatable {}
 extension RepairClubSDK.OTAFirmwareUpdateLog.OTAStatus : Swift.Hashable {}
 extension RepairClubSDK.OTAFirmwareUpdateLog.OTAStatus : Swift.RawRepresentable {}
-extension RepairClubSDK.Status : Swift.Equatable {}
-extension RepairClubSDK.Status : Swift.Hashable {}
-extension RepairClubSDK.Status : Swift.RawRepresentable {}
+extension RepairClubSDK.OperationStatus : Swift.Equatable {}
+extension RepairClubSDK.OperationStatus : Swift.Hashable {}
+extension RepairClubSDK.OperationStatus : Swift.RawRepresentable {}
 extension RepairClubSDK.ScanType : Swift.Equatable {}
 extension RepairClubSDK.ScanType : Swift.Hashable {}
 extension RepairClubSDK.ScanType : Swift.RawRepresentable {}
