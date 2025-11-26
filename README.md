@@ -11,7 +11,7 @@
 Add **RepairClubSDK** to your project via Swift Package Manager:
 
 1. In Xcode, go to **File ▶ Swift Packages ▶ Add Package Dependency...**  
-2. Enter your repository URL (e.g. `https://github.com/RRCummins/RepairClubSDK.git`) and click **Next**.  
+2. Enter your repository URL (e.g. `https://github.com/repairclub/repairclub-ios-sdk.git`) and click **Next**.  
 3. Choose a version (e.g. “Up to Next Major” or a specific tag) and click **Next**.  
 4. Select the `RepairClubSDK` package product. Under **Add to Target**, verify your app or framework target is checked. Click **Finish**.  
 
@@ -291,9 +291,9 @@ class MyViewModel: ObservableObject {
         let sdk = RepairClubManager.shared
         sdk.configureSDK(
             tokenString: "abc123xyz",    // Obtain from Repair Club, LLC
-            appName: "RepairApp",
+            appName: "YourApp",
             appVersion: "1.2.3",
-            userID: "ryan.cummins@example.com"
+            userID: "some.user@example.com"
         )
 
         // Listen for device connection state
