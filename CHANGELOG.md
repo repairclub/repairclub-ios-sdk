@@ -10,10 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.5.5] - 2025-11-25
+## [1.5.5] - 2025-12-02
 ### Added
-- Added new error handling to the scanning and clear codes APIs
-- Added new logging to advanced operations like scanning and clear codes
+- Updates to advanced operation logging
+- Updates to advanced command logging, clear codes
+- Updates to advanced value logging
+- Updates to generic value logging
+- New APIs for scanning and clearing codes
+- Improved error handling for scanning and clearing codes
 
 ### Fixed
 - 

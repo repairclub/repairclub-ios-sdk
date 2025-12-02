@@ -172,6 +172,11 @@ manager.subscribeToLiveStream { result in
   List of every possible Mode 01 PID supported.
 - `requestAvailableLiveDataSources()` → `Result<[LiveDataSource], Error>`  
   Currently available PIDs that the vehicle reports.
+- `requestModeDump(mode:)` -> `Result<Bool, Error>`
+  Request a full dump of a specific diagnostic mode (e.g., "01", "06").
+  > **Note:** This feature requires beta device firmware version **2.022.11** or newer.
+- `requestDataPoint(pid:oldAndNew:callback:)`
+  Request a single data point (PID). If `oldAndNew` is true, it returns the current and new values.
 - `startLiveDataStream(with:)` → `Result<Bool, Error>`  
   Begin streaming live data (max 8 PIDs at once).
 - `endLiveDataStream()` → `Bool`  
@@ -228,8 +233,8 @@ manager.subscribeToLiveStream { result in
   Start a service (e.g., OEM-specific calibration, programming). Progress via `OperationProgressUpdate`.
 - `clearGenericCodes(completionHandler:)`  
   Clear all generic (Mode 03) codes.
-- `clearAllCodes(progressHandler:)`  
-  Clear ALL codes (generic + advanced), with progress updates.
+- `clearAllCodes(progressHandler:)` **throws**
+  Clear ALL codes (generic + advanced). This method throws an error if the session is missing or fails to start.
 
 ### Firmware Updates
 - `subscribeToFirmwareProgress(_:)`  
@@ -244,10 +249,9 @@ manager.subscribeToLiveStream { result in
   Stop and (optionally) disconnect.
 - `subscribeToFirmwareVersionChanges(reqReleaseLevel:completionCallback:)`  
   Monitor version info changes (`currentVersion`, `newestVersionAvailable`).
-- `getFirmwareVersions(reqReleaseLevel:completion:)`  
-  Return `(current, alpha, beta, prod)` version strings.
-- `getFirmwareVersionsWithNotes(reqReleaseLevel:completion:)`  
-  Return `FirmwareVersionInfo` structs.
+- `getFirmwareLatestVersionDetails(completion:)`
+- `getFirmwareLatestVersionDetails() async throws -> FirmwareInformationDetail?`
+  Fetch detailed information about the latest production firmware, including release notes and status.
 - `getDeviceFirmwareVersion()` → `Result<String?, Error>`  
   Get current device firmware.
 - `getNewestAvailableFirmwareVersion()` → `Result<String?, Error>`  
