@@ -319,8 +319,8 @@ class MyViewModel: ObservableObject {
     }
 
     func connect(to item: DeviceItem) {
-        if let peripheral = item.peripheral {
-            RepairClubManager.shared.connectToDevice(peripheral: peripheral) { _, _, state in
+        if let device = item.device {
+            RepairClubManager.shared.connectToDevice(peripheral: device) { _, _, state in
                 print("Connected state:", state)
             }
         }
