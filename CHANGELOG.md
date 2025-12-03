@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.5.5] - 2025-12-02
+## [1.5.5] - 2025-12-03
 ### Added
 - Updates to advanced operation logging
 - Updates to advanced command logging, clear codes
