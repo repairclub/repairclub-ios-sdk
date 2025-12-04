@@ -1911,7 +1911,6 @@ public enum ConnectionCommands : Swift.String, Swift.CaseIterable {
   case noVehicleIdentificationNumber
   case newSession
   case packet
-  case ready
   case resend
   case startCapture
   case supportedMIDS
