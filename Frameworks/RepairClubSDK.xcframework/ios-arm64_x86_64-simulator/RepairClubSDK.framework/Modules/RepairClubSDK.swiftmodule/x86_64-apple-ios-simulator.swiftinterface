@@ -2437,9 +2437,11 @@ public struct FirmwareReleaseDetailsInternal : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RepairClubAPIResponse : Swift.Codable {
-  public let status: Swift.Int
+  public let status: Swift.Int?
   public let message: Swift.String?
   public let payload: Swift.String?
+  public let opId: Swift.Int?
+  public let sqlUpdates: [Swift.String]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

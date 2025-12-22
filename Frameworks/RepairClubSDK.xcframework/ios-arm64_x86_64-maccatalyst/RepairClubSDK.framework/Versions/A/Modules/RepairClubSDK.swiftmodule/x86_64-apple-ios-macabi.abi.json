@@ -99900,14 +99900,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:13RepairClubSDK0aB11APIResponseV6statusSivp",
-            "mangledName": "$s13RepairClubSDK0aB11APIResponseV6statusSivp",
+            "usr": "s:13RepairClubSDK0aB11APIResponseV6statusSiSgvp",
+            "mangledName": "$s13RepairClubSDK0aB11APIResponseV6statusSiSgvp",
             "moduleName": "RepairClubSDK",
             "declAttributes": [
               "HasStorage",
@@ -99923,14 +99931,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13RepairClubSDK0aB11APIResponseV6statusSivg",
-                "mangledName": "$s13RepairClubSDK0aB11APIResponseV6statusSivg",
+                "usr": "s:13RepairClubSDK0aB11APIResponseV6statusSiSgvg",
+                "mangledName": "$s13RepairClubSDK0aB11APIResponseV6statusSiSgvg",
                 "moduleName": "RepairClubSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -100051,6 +100067,142 @@
                 "declKind": "Accessor",
                 "usr": "s:13RepairClubSDK0aB11APIResponseV7payloadSSSgvg",
                 "mangledName": "$s13RepairClubSDK0aB11APIResponseV7payloadSSSgvg",
+                "moduleName": "RepairClubSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "opId",
+            "printedName": "opId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RepairClubSDK0aB11APIResponseV4opIdSiSgvp",
+            "mangledName": "$s13RepairClubSDK0aB11APIResponseV4opIdSiSgvp",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RepairClubSDK0aB11APIResponseV4opIdSiSgvg",
+                "mangledName": "$s13RepairClubSDK0aB11APIResponseV4opIdSiSgvg",
+                "moduleName": "RepairClubSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sqlUpdates",
+            "printedName": "sqlUpdates",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RepairClubSDK0aB11APIResponseV10sqlUpdatesSaySSGSgvp",
+            "mangledName": "$s13RepairClubSDK0aB11APIResponseV10sqlUpdatesSaySSGSgvp",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RepairClubSDK0aB11APIResponseV10sqlUpdatesSaySSGSgvg",
+                "mangledName": "$s13RepairClubSDK0aB11APIResponseV10sqlUpdatesSaySSGSgvg",
                 "moduleName": "RepairClubSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -120709,21 +120861,21 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentScan.swift",
       "kind": "Array",
-      "offset": 58386,
+      "offset": 58406,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentScan.swift",
       "kind": "Array",
-      "offset": 58441,
+      "offset": 58461,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentScan.swift",
       "kind": "FloatLiteral",
-      "offset": 58545,
+      "offset": 58565,
       "length": 3,
       "value": "0.5"
     },
@@ -121409,49 +121561,49 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 36674,
+      "offset": 36693,
       "length": 20,
       "value": "\"pro.repairclub.sdk\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 36706,
+      "offset": 36725,
       "length": 28,
       "value": "\"AdvancedValue::Operation::\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 37212,
+      "offset": 37231,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "Dictionary",
-      "offset": 37722,
+      "offset": 37741,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 37778,
+      "offset": 37797,
       "length": 19,
       "value": "\"adv.value.pending\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "Array",
-      "offset": 37858,
+      "offset": 37877,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/AdvancedValueHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 39399,
+      "offset": 39418,
       "length": 3,
       "value": "1.0"
     },
@@ -123007,7 +123159,7 @@
       "kind": "StringLiteral",
       "offset": 2322,
       "length": 5,
-      "value": "\"737\""
+      "value": "\"739\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -131828,6 +131980,20 @@
       "offset": 2806,
       "length": 24,
       "value": "\"internal_release_notes\""
+    },
+    {
+      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/APIModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4348,
+      "length": 7,
+      "value": "\"op_id\""
+    },
+    {
+      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/APIModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4382,
+      "length": 13,
+      "value": "\"sql_updates\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
