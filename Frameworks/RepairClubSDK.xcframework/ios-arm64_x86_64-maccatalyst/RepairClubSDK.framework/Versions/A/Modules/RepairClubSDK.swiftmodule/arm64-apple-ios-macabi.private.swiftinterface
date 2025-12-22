@@ -30,6 +30,30 @@ public struct SDKLogger {
   public func fault(_ message: Swift.String)
   public func debug(_ message: @autoclosure () -> Swift.String)
 }
+public enum ReadinessError : Foundation.LocalizedError {
+  case sessionMissing
+  case hardwareTimeout
+  case invalidDataReceived
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public static func == (a: RepairClubSDK.ReadinessError, b: RepairClubSDK.ReadinessError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ReadinessRequestMode : Swift.Sendable {
+  case standard
+  case alternate
+  public static func == (a: RepairClubSDK.ReadinessRequestMode, b: RepairClubSDK.ReadinessRequestMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct ScanEntry : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
   public var vehicle: RepairClubSDK.VehicleEntry
@@ -2518,17 +2542,16 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func advancedValueRequestOnce(keys: [(ecuKey: Swift.String, valueKey: Swift.String)], completion: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void)
   final public func advancedValueStartStreaming(keys: [(ecuKey: Swift.String, valueKey: Swift.String)], intervalSeconds: Foundation.TimeInterval = 1.0, onUpdate: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void)
   final public func advancedValueStopStreaming()
-  final public func subscribeToMonitors(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
   final public func subscribeToMode06Monitors(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
   final public func subscribeToMode06SupportedMonitors(_ completionHandler: @escaping (RepairClubSDK.Result<[Swift.String], any Swift.Error>) -> Swift.Void)
-  final public func requestReadinessMonitors(continuous: Swift.Bool = false)
   final public func requestMode06Monitors(shouldLoop: Swift.Bool = true)
   final public func endRequestMode06MonitorsTimer()
-  final public func requestReadinessMonitors(shouldLoop: Swift.Bool = false, reqType: Swift.Int = 3)
-  final public func startRequestReadinessMonitorsTimer()
-  final public func endRequestReadinessMonitorsTimer()
-  final public func registerMilChange(callback completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
-  final public func requestMilStatus() -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
+  final public func requestReadiness(mode: RepairClubSDK.ReadinessRequestMode = .standard, refresh: Swift.Bool = false) async throws -> [RepairClubSDK.ValueMonitor]
+  final public func subscribeToReadinessUpdates(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
+  final public func subscribeToMilChanges(_ completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func requestMilStatus() -> Swift.Result<Swift.Bool, any Swift.Error>
+  #endif
   final public func requestFreezeFrameFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
@@ -2820,6 +2843,10 @@ extension Foundation.Date {
     get
   }
 }
+extension RepairClubSDK.ReadinessError : Swift.Equatable {}
+extension RepairClubSDK.ReadinessError : Swift.Hashable {}
+extension RepairClubSDK.ReadinessRequestMode : Swift.Equatable {}
+extension RepairClubSDK.ReadinessRequestMode : Swift.Hashable {}
 extension RepairClubSDK.VehicleInfoRequest.Reason : Swift.Equatable {}
 extension RepairClubSDK.VehicleInfoRequest.Reason : Swift.Hashable {}
 extension RepairClubSDK.AdvancedOperationType : Swift.Equatable {}

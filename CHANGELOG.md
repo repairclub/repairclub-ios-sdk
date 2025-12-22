@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.6] - 2025-12-22
+### Added
+- 
+
+### Fixed
+- Fixed a bug with readiness monitor retrying
+
 ## [1.5.5] - 2025-12-03
 ### Added
 - Updates to advanced operation logging

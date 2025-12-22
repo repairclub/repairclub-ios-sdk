@@ -374,6 +374,577 @@
         "moduleName": "RepairClubSDK"
       },
       {
+        "kind": "TypeDecl",
+        "name": "ReadinessError",
+        "printedName": "ReadinessError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sessionMissing",
+            "printedName": "sessionMissing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.ReadinessError.Type) -> RepairClubSDK.ReadinessError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadinessError",
+                    "printedName": "RepairClubSDK.ReadinessError",
+                    "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.ReadinessError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadinessError",
+                        "printedName": "RepairClubSDK.ReadinessError",
+                        "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO14sessionMissingyA2CmF",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO14sessionMissingyA2CmF",
+            "moduleName": "RepairClubSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "hardwareTimeout",
+            "printedName": "hardwareTimeout",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.ReadinessError.Type) -> RepairClubSDK.ReadinessError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadinessError",
+                    "printedName": "RepairClubSDK.ReadinessError",
+                    "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.ReadinessError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadinessError",
+                        "printedName": "RepairClubSDK.ReadinessError",
+                        "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO15hardwareTimeoutyA2CmF",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO15hardwareTimeoutyA2CmF",
+            "moduleName": "RepairClubSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidDataReceived",
+            "printedName": "invalidDataReceived",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.ReadinessError.Type) -> RepairClubSDK.ReadinessError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadinessError",
+                    "printedName": "RepairClubSDK.ReadinessError",
+                    "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.ReadinessError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadinessError",
+                        "printedName": "RepairClubSDK.ReadinessError",
+                        "usr": "s:13RepairClubSDK14ReadinessErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO19invalidDataReceivedyA2CmF",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO19invalidDataReceivedyA2CmF",
+            "moduleName": "RepairClubSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO16errorDescriptionSSSgvp",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RepairClubSDK14ReadinessErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s13RepairClubSDK14ReadinessErrorO16errorDescriptionSSSgvg",
+                "moduleName": "RepairClubSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadinessError",
+                "printedName": "RepairClubSDK.ReadinessError",
+                "usr": "s:13RepairClubSDK14ReadinessErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadinessError",
+                "printedName": "RepairClubSDK.ReadinessError",
+                "usr": "s:13RepairClubSDK14ReadinessErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "RepairClubSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO9hashValueSivp",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO9hashValueSivp",
+            "moduleName": "RepairClubSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RepairClubSDK14ReadinessErrorO9hashValueSivg",
+                "mangledName": "$s13RepairClubSDK14ReadinessErrorO9hashValueSivg",
+                "moduleName": "RepairClubSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RepairClubSDK14ReadinessErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13RepairClubSDK14ReadinessErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "RepairClubSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13RepairClubSDK14ReadinessErrorO",
+        "mangledName": "$s13RepairClubSDK14ReadinessErrorO",
+        "moduleName": "RepairClubSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReadinessRequestMode",
+        "printedName": "ReadinessRequestMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "standard",
+            "printedName": "standard",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.ReadinessRequestMode.Type) -> RepairClubSDK.ReadinessRequestMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadinessRequestMode",
+                    "printedName": "RepairClubSDK.ReadinessRequestMode",
+                    "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.ReadinessRequestMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadinessRequestMode",
+                        "printedName": "RepairClubSDK.ReadinessRequestMode",
+                        "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK20ReadinessRequestModeO8standardyA2CmF",
+            "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO8standardyA2CmF",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alternate",
+            "printedName": "alternate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.ReadinessRequestMode.Type) -> RepairClubSDK.ReadinessRequestMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReadinessRequestMode",
+                    "printedName": "RepairClubSDK.ReadinessRequestMode",
+                    "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.ReadinessRequestMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReadinessRequestMode",
+                        "printedName": "RepairClubSDK.ReadinessRequestMode",
+                        "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK20ReadinessRequestModeO9alternateyA2CmF",
+            "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO9alternateyA2CmF",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadinessRequestMode",
+                "printedName": "RepairClubSDK.ReadinessRequestMode",
+                "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadinessRequestMode",
+                "printedName": "RepairClubSDK.ReadinessRequestMode",
+                "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RepairClubSDK20ReadinessRequestModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "RepairClubSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RepairClubSDK20ReadinessRequestModeO9hashValueSivp",
+            "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO9hashValueSivp",
+            "moduleName": "RepairClubSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RepairClubSDK20ReadinessRequestModeO9hashValueSivg",
+                "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO9hashValueSivg",
+                "moduleName": "RepairClubSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RepairClubSDK20ReadinessRequestModeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO4hash4intoys6HasherVz_tF",
+            "moduleName": "RepairClubSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13RepairClubSDK20ReadinessRequestModeO",
+        "mangledName": "$s13RepairClubSDK20ReadinessRequestModeO",
+        "moduleName": "RepairClubSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -102092,68 +102663,6 @@
           },
           {
             "kind": "Function",
-            "name": "subscribeToMonitors",
-            "printedName": "subscribeToMonitors(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[RepairClubSDK.ValueMonitor]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ValueMonitor",
-                            "printedName": "RepairClubSDK.ValueMonitor",
-                            "usr": "s:13RepairClubSDK12ValueMonitorV"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:13RepairClubSDK6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC19subscribeToMonitorsyyyAA6ResultOySayAA12ValueMonitorVGs5Error_pGcF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC19subscribeToMonitorsyyyAA6ResultOySayAA12ValueMonitorVGs5Error_pGcF",
-            "moduleName": "RepairClubSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "subscribeToMode06Monitors",
             "printedName": "subscribeToMode06Monitors(_:)",
             "children": [
@@ -102209,7 +102718,8 @@
             "moduleName": "RepairClubSDK",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -102276,35 +102786,6 @@
           },
           {
             "kind": "Function",
-            "name": "requestReadinessMonitors",
-            "printedName": "requestReadinessMonitors(continuous:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC24requestReadinessMonitors10continuousySb_tF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC24requestReadinessMonitors10continuousySb_tF",
-            "moduleName": "RepairClubSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "requestMode06Monitors",
             "printedName": "requestMode06Monitors(shouldLoop:)",
             "children": [
@@ -102356,13 +102837,29 @@
           },
           {
             "kind": "Function",
-            "name": "requestReadinessMonitors",
-            "printedName": "requestReadinessMonitors(shouldLoop:reqType:)",
+            "name": "requestReadiness",
+            "printedName": "requestReadiness(mode:refresh:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Array",
+                "printedName": "[RepairClubSDK.ValueMonitor]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ValueMonitor",
+                    "printedName": "RepairClubSDK.ValueMonitor",
+                    "usr": "s:13RepairClubSDK12ValueMonitorV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadinessRequestMode",
+                "printedName": "RepairClubSDK.ReadinessRequestMode",
+                "hasDefaultArg": true,
+                "usr": "s:13RepairClubSDK20ReadinessRequestModeO"
               },
               {
                 "kind": "TypeNominal",
@@ -102370,18 +102867,74 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RepairClubSDK0aB7ManagerC16requestReadiness4mode7refreshSayAA12ValueMonitorVGAA0F11RequestModeO_SbtYaKF",
+            "mangledName": "$s13RepairClubSDK0aB7ManagerC16requestReadiness4mode7refreshSayAA12ValueMonitorVGAA0F11RequestModeO_SbtYaKF",
+            "moduleName": "RepairClubSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribeToReadinessUpdates",
+            "printedName": "subscribeToReadinessUpdates(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
               },
               {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[RepairClubSDK.ValueMonitor]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ValueMonitor",
+                            "printedName": "RepairClubSDK.ValueMonitor",
+                            "usr": "s:13RepairClubSDK12ValueMonitorV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:13RepairClubSDK6ResultO"
+                  }
+                ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC24requestReadinessMonitors10shouldLoop7reqTypeySb_SitF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC24requestReadinessMonitors10shouldLoop7reqTypeySb_SitF",
+            "usr": "s:13RepairClubSDK0aB7ManagerC27subscribeToReadinessUpdatesyyyAA6ResultOySayAA12ValueMonitorVGs5Error_pGcF",
+            "mangledName": "$s13RepairClubSDK0aB7ManagerC27subscribeToReadinessUpdatesyyyAA6ResultOySayAA12ValueMonitorVGs5Error_pGcF",
             "moduleName": "RepairClubSDK",
             "declAttributes": [
               "Final",
@@ -102392,52 +102945,8 @@
           },
           {
             "kind": "Function",
-            "name": "startRequestReadinessMonitorsTimer",
-            "printedName": "startRequestReadinessMonitorsTimer()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC34startRequestReadinessMonitorsTimeryyF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC34startRequestReadinessMonitorsTimeryyF",
-            "moduleName": "RepairClubSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "endRequestReadinessMonitorsTimer",
-            "printedName": "endRequestReadinessMonitorsTimer()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC32endRequestReadinessMonitorsTimeryyF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC32endRequestReadinessMonitorsTimeryyF",
-            "moduleName": "RepairClubSDK",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "registerMilChange",
-            "printedName": "registerMilChange(callback:)",
+            "name": "subscribeToMilChanges",
+            "printedName": "subscribeToMilChanges(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -102478,8 +102987,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC17registerMilChange8callbackyyAA6ResultOySbs5Error_pGc_tF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC17registerMilChange8callbackyyAA6ResultOySbs5Error_pGc_tF",
+            "usr": "s:13RepairClubSDK0aB7ManagerC21subscribeToMilChangesyyyAA6ResultOySbs5Error_pGcF",
+            "mangledName": "$s13RepairClubSDK0aB7ManagerC21subscribeToMilChangesyyyAA6ResultOySbs5Error_pGcF",
             "moduleName": "RepairClubSDK",
             "declAttributes": [
               "Final",
@@ -102496,7 +103005,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Result",
-                "printedName": "RepairClubSDK.Result<Swift.Bool, any Swift.Error>",
+                "printedName": "Swift.Result<Swift.Bool, any Swift.Error>",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -102511,12 +103020,12 @@
                     "usr": "s:s5ErrorP"
                   }
                 ],
-                "usr": "s:13RepairClubSDK6ResultO"
+                "usr": "s:s6ResultO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13RepairClubSDK0aB7ManagerC16requestMilStatusAA6ResultOySbs5Error_pGyF",
-            "mangledName": "$s13RepairClubSDK0aB7ManagerC16requestMilStatusAA6ResultOySbs5Error_pGyF",
+            "usr": "s:13RepairClubSDK0aB7ManagerC16requestMilStatuss6ResultOySbs5Error_pGyF",
+            "mangledName": "$s13RepairClubSDK0aB7ManagerC16requestMilStatuss6ResultOySbs5Error_pGyF",
             "moduleName": "RepairClubSDK",
             "declAttributes": [
               "Final",
@@ -116588,72 +117097,23 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "StringLiteral",
-      "offset": 207,
+      "offset": 1015,
       "length": 20,
       "value": "\"pro.repairclub.sdk\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "StringLiteral",
-      "offset": 239,
+      "offset": 1047,
       "length": 20,
       "value": "\"ReadinessHandler::\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "Array",
-      "offset": 425,
+      "offset": 1182,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "BooleanLiteral",
-      "offset": 476,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 629,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 670,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "IntegerLiteral",
-      "offset": 780,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "BooleanLiteral",
-      "offset": 826,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "BooleanLiteral",
-      "offset": 875,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1572,
-      "length": 1,
-      "value": "3"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ScanEntry.swift",
@@ -117022,23 +117482,16 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 48686,
+      "offset": 48707,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "Array",
-      "offset": 104540,
+      "offset": 104563,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
-      "kind": "BooleanLiteral",
-      "offset": 109155,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
@@ -117050,42 +117503,49 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 109198,
+      "offset": 109201,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 109221,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 125526,
+      "offset": 127848,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 130721,
+      "offset": 133043,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "FloatLiteral",
-      "offset": 136948,
+      "offset": 139270,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 144673,
+      "offset": 146997,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 144703,
+      "offset": 147027,
       "length": 5,
       "value": "false"
     },
@@ -119892,98 +120352,98 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "StringLiteral",
-      "offset": 440,
+      "offset": 446,
       "length": 20,
       "value": "\"pro.repairclub.sdk\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "StringLiteral",
-      "offset": 472,
+      "offset": 478,
       "length": 11,
       "value": "\"Encrypt::\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "Dictionary",
-      "offset": 619,
+      "offset": 625,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 904,
+      "offset": 911,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "Dictionary",
-      "offset": 1025,
+      "offset": 1032,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1079,
+      "offset": 1086,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1122,
+      "offset": 1129,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4325,
+      "offset": 4301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4360,
+      "offset": 4336,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 27201,
+      "offset": 27194,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 27236,
+      "offset": 27229,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 29187,
+      "offset": 29182,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 29222,
+      "offset": 29217,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/BLEEncryptionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 30768,
+      "offset": 30763,
       "length": 4,
       "value": "true"
     },
@@ -122540,14 +123000,14 @@
       "kind": "StringLiteral",
       "offset": 2276,
       "length": 7,
-      "value": "\"1.5.5\""
+      "value": "\"1.5.6\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
       "kind": "StringLiteral",
       "offset": 2322,
       "length": 5,
-      "value": "\"724\""
+      "value": "\"737\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -131407,42 +131867,28 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 22006,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 22485,
+      "offset": 21817,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 24550,
+      "offset": 22869,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24572,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 29262,
+      "offset": 27573,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "StringLiteral",
-      "offset": 29414,
+      "offset": 27725,
       "length": 40,
       "value": "\"Error: Failed to find session for scan\""
     },
