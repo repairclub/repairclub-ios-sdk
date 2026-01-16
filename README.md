@@ -330,4 +330,46 @@ class MyViewModel: ObservableObject {
 
 ---
 
+### Freeze Frame
 
+Freeze frame data captures a snapshot of vehicle sensor values at the moment a trouble code was set. This helps diagnose intermittent issues by showing exact conditions when the fault occurred.
+
+- `requestFreezeFrameFor(code:scanEntry:callback:)`  
+  Retrieve full freeze frame monitors (as `[ValueMonitor]`) for a specific trouble code.
+- `requestFreezeFrameValuesFor(code:scanEntry:valueCompletionHandler:)`  
+  Retrieve raw freeze frame PID values as a dictionary (`[String: Double]`).
+
+```swift
+// After completing a DTC scan, request freeze frame for a specific code
+let manager = RepairClubManager.shared
+
+// Using the full monitors (includes labels, units, and formatted values)
+manager.requestFreezeFrameFor(code: troubleCode, scanEntry: scanEntry) { result in
+    switch result {
+    case .success(let monitors):
+        for monitor in monitors {
+            if let value = monitor.values.first {
+                print("\(monitor.name): \(value.numericValue)")
+            }
+        }
+    case .failure(let error):
+        print("Freeze frame error:", error.description)
+    }
+}
+
+// Or get just the raw numeric values
+manager.requestFreezeFrameValuesFor(code: troubleCode, scanEntry: scanEntry) { result in
+    switch result {
+    case .success(let values):
+        // values is [String: Double], e.g. [010C": 750.0, "0105": 85.0]        for (pid, value) in values {
+            print("\(pid): \(value)")
+        }
+    case .failure(let error):
+        print("Freeze frame error:", error.description)
+    }
+}
+```
+
+> **Note:** Freeze frame data is only available for generic (Mode 02) trouble codes. The `scanEntry` parameter should come from your DTC scan results.
+
+---

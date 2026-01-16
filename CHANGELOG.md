@@ -10,12 +10,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.6.0, beta.1] - 2026-01-16
+### Added
+- New Live Data Mode
+
+### Fixed
+- Moved MIL checking to before a scan
+
+---
+
+
 ## [1.5.6] - 2025-12-22
 ### Added
 - 
 
 ### Fixed
 - Fixed a bug with readiness monitor retrying
+
+---
+
 
 ## [1.5.5] - 2025-12-03
 ### Added
@@ -28,6 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - 
+
+---
 
 ## [1.5.4] - 2025-11-11
 ### Added

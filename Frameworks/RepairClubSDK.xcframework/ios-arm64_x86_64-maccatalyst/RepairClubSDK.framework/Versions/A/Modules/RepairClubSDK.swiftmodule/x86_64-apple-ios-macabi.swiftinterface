@@ -117,6 +117,38 @@ extension UIKit.UIViewController {
   }
   @objc deinit
 }
+public struct AVStreamStatus : Swift.Sendable {
+  public let isActive: Swift.Bool
+  public let allocatedSlots: Swift.Int
+  public let availableSlots: Swift.Int
+  public let streamStartTime: Foundation.Date?
+  public let duration: Foundation.TimeInterval?
+  public let remainingTime: Foundation.TimeInterval?
+  public var totalSlots: Swift.Int {
+    get
+  }
+  public var hasTimeLimit: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var elapsedTime: Foundation.TimeInterval? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var progress: Swift.Double? {
+    get
+  }
+  #endif
+  public static var inactive: RepairClubSDK.AVStreamStatus {
+    get
+  }
+}
+extension RepairClubSDK.AVStreamStatus : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
 public struct PidRecord : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -367,6 +399,36 @@ extension RepairClubSDK.VehicleDataStream {
 extension RepairClubSDK.VehicleDataSample : Swift.Comparable {
   public static func == (lhs: RepairClubSDK.VehicleDataSample, rhs: RepairClubSDK.VehicleDataSample) -> Swift.Bool
   public static func < (lhs: RepairClubSDK.VehicleDataSample, rhs: RepairClubSDK.VehicleDataSample) -> Swift.Bool
+}
+public enum AVStreamError : Swift.Error, Foundation.LocalizedError, Swift.Sendable {
+  case noActiveSession
+  case handlerNotInitialized
+  case emptyPairsArray
+  case noValidPairs(provided: Swift.Int)
+  case partialResolution(valid: Swift.Int, invalid: Swift.Int, invalidKeys: [Swift.String])
+  case noSlotsAvailable(requested: Swift.Int, available: Swift.Int)
+  case streamAlreadyActive
+  case noActiveStream
+  case noConfig
+  case invalidDuration(Foundation.TimeInterval)
+  case sessionDisconnected
+  case slotAllocationFailed(reason: Swift.String)
+  case noValidSlotsAfterValidation(originalCount: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var failureReason: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var recoverySuggestion: Swift.String? {
+    get
+  }
+  #endif
 }
 public struct ModuleItem : Swift.Identifiable, Swift.Codable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
@@ -1921,6 +1983,7 @@ public enum ConnectionCommands : Swift.String, Swift.CaseIterable {
   case dataSessionDescriptionStart
   case dataQueryForADataPoint
   case dataPoint
+  case dataRaw
   case deviceInformation
   case endCapture
   case endDataSessionDescription
@@ -1936,6 +1999,7 @@ public enum ConnectionCommands : Swift.String, Swift.CaseIterable {
   case newSession
   case packet
   case resend
+  case responseValue
   case startCapture
   case supportedMIDS
   case sessionStats
@@ -2310,6 +2374,29 @@ public struct ServiceAdvanced : Swift.Codable, Swift.Identifiable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum StreamRequestType : Swift.Sendable, Swift.Hashable {
+  case standard(pid: Swift.String)
+  case advanced(ecuKey: Swift.String, valueKey: Swift.String)
+  case operation(name: Swift.String)
+  public static func == (a: RepairClubSDK.StreamRequestType, b: RepairClubSDK.StreamRequestType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct StreamRequest : Swift.Identifiable, Swift.Sendable, Swift.Hashable {
+  public var id: Swift.String {
+    get
+  }
+  public let type: RepairClubSDK.StreamRequestType
+  public init(type: RepairClubSDK.StreamRequestType)
+  public static func == (a: RepairClubSDK.StreamRequest, b: RepairClubSDK.StreamRequest) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public typealias LiveDataSource = RepairClubSDK.VehicleDataDescriptor
 extension RepairClubSDK.VehicleDataDescriptor {
   public static let blankSource: RepairClubSDK.LiveDataSource
@@ -2535,15 +2622,21 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestAvailableLiveDataSources() -> RepairClubSDK.Result<[RepairClubSDK.LiveDataSource], any Swift.Error>
   final public func startLiveDataStream(with codes: [RepairClubSDK.LiveDataSource]) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
   final public func endLiveDataStream() -> Swift.Bool
-  final public func requestModeDump(mode: Swift.String) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
   final public func currentLiveFeedCSV(countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func returnLiveFeedCSV(from feedEntries: [RepairClubSDK.VehicleDataStream], countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func requestDataPoint(pid: Swift.String, oldAndNew: Swift.Bool = false, callback: @escaping (Swift.String) -> Swift.Void)
   final public func advancedValueCatalog() -> [RepairClubSDK.AVECU]
   final public func advancedValueOperationCatalog(set: Swift.String) -> [RepairClubSDK.AVECU]
-  final public func advancedValueRequestOnce(keys: [(ecuKey: Swift.String, valueKey: Swift.String)], completion: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void)
-  final public func advancedValueStartStreaming(keys: [(ecuKey: Swift.String, valueKey: Swift.String)], intervalSeconds: Foundation.TimeInterval = 1.0, onUpdate: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void)
-  final public func advancedValueStopStreaming()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func startUnifiedStream(standardPids: [Swift.String] = [], advancedKeys: [(ecuKey: Swift.String, valueKey: Swift.String)] = [], operations: [Swift.String] = [], duration: Foundation.TimeInterval? = nil, validateStandard: Swift.Bool = false, validateAdvanced: Swift.Bool = false, excludedTypes: [RepairClubSDK.VehicleDataValueType] = [.noData, .nrc("Any")], onUpdate: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void) throws
+  #endif
+  final public func stopUnifiedStream()
+  final public var advancedValueAvailableSlots: Swift.Int {
+    get
+  }
+  final public var advancedValueMaxSlots: Swift.Int {
+    get
+  }
   final public func subscribeToMode06Monitors(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
   final public func subscribeToMode06SupportedMonitors(_ completionHandler: @escaping (RepairClubSDK.Result<[Swift.String], any Swift.Error>) -> Swift.Void)
   final public func requestMode06Monitors(shouldLoop: Swift.Bool = true)
