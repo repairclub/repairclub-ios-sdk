@@ -2622,6 +2622,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestAvailableLiveDataSources() -> RepairClubSDK.Result<[RepairClubSDK.LiveDataSource], any Swift.Error>
   final public func startLiveDataStream(with codes: [RepairClubSDK.LiveDataSource]) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
   final public func endLiveDataStream() -> Swift.Bool
+  final public func requestModeDump(mode: Swift.String) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
   final public func currentLiveFeedCSV(countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func returnLiveFeedCSV(from feedEntries: [RepairClubSDK.VehicleDataStream], countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func requestDataPoint(pid: Swift.String, oldAndNew: Swift.Bool = false, callback: @escaping (Swift.String) -> Swift.Void)
@@ -2649,7 +2650,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   #endif
   final public func requestFreezeFrameFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
-  final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
+  final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, quickGenericScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func startExtendedTroubleCodeScan(progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func stopTroubleCodeScan()
   final public func pvcop(input: Swift.Int, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
