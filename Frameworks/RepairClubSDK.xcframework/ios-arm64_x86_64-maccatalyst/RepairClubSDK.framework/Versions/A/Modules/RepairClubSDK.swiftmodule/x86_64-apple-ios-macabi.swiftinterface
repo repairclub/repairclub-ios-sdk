@@ -361,6 +361,7 @@ public struct FirmwareProgress {
   public var dataTotal: Swift.Int
   public var firmwareVersion: Swift.String
   public var firmwareDownloaded: Swift.Bool
+  public var percent: CoreFoundation.CGFloat
   public var waitingMessage: Swift.String
 }
 public enum FirmwareReleaseType : Swift.String, Swift.Codable, Swift.CaseIterable, Swift.Identifiable {
@@ -659,6 +660,7 @@ public enum CommonError : Swift.Error, Swift.Codable {
   case authenticationFaileduserNotFound(RepairClubSDK.ErrorLevel)
   case authenticationFailedIncorrectPassword(RepairClubSDK.ErrorLevel)
   case advancedScanNotFound(RepairClubSDK.ErrorLevel)
+  case unsupportedMode(RepairClubSDK.ErrorLevel)
   case invalidToken(RepairClubSDK.ErrorLevel)
   case invalidFirmware(RepairClubSDK.ErrorLevel)
   case noScanFound(RepairClubSDK.ErrorLevel)
@@ -2162,13 +2164,15 @@ public struct VehicleDataStream : Swift.Codable, Swift.Identifiable, Swift.Senda
     get
   }
   public var ecuKey: Swift.String
+  public var ecuIdentifier: Swift.String
   public var valueKey: Swift.String
+  public var valueIdentifier: Swift.String
   public var unit: Swift.String?
   public var technicalName: Swift.String?
   public var displayName: Swift.String?
   public var values: [RepairClubSDK.VehicleDataSample]
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(ecuKey: Swift.String, valueKey: Swift.String, unit: Swift.String? = nil, technicalName: Swift.String? = nil, displayName: Swift.String? = nil, values: [RepairClubSDK.VehicleDataSample] = [])
+  public init(ecuKey: Swift.String, ecuIdentifier: Swift.String, valueKey: Swift.String, valueIdentifier: Swift.String, unit: Swift.String? = nil, technicalName: Swift.String? = nil, displayName: Swift.String? = nil, values: [RepairClubSDK.VehicleDataSample] = [])
   #endif
   public typealias ID = Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
@@ -2622,7 +2626,11 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestAvailableLiveDataSources() -> RepairClubSDK.Result<[RepairClubSDK.LiveDataSource], any Swift.Error>
   final public func startLiveDataStream(with codes: [RepairClubSDK.LiveDataSource]) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
   final public func endLiveDataStream() -> Swift.Bool
-  final public func requestModeDump(mode: Swift.String) -> RepairClubSDK.Result<Swift.Bool, any Swift.Error>
+  final public func requestModeDump(mode: Swift.String, duration: Foundation.TimeInterval = 10.0, onEntry: @escaping (RepairClubSDK.VehicleDataStream) -> Swift.Void) async -> RepairClubSDK.Result<Swift.Void, any Swift.Error>
+  final public func cancelModeDump() async
+  final public var isModeDumpActive: Swift.Bool {
+    get async
+  }
   final public func currentLiveFeedCSV(countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func returnLiveFeedCSV(from feedEntries: [RepairClubSDK.VehicleDataStream], countToKeep: Swift.Int = 1_000) -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func requestDataPoint(pid: Swift.String, oldAndNew: Swift.Bool = false, callback: @escaping (Swift.String) -> Swift.Void)
@@ -2716,7 +2724,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   #endif
   final public func startDemoMode(demoOn: Swift.Bool, _ connectionHandler: @escaping (RepairClubSDK.ConnectionEntry, RepairClubSDK.ConnectionStage, RepairClubSDK.ConnectionState) -> Swift.Void)
   final public func stopDemoMode()
-  final public func clearKeyCahe() async
+  final public func clearKeyCache() async
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }

@@ -10,13 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.6.0, beta.1] - 2026-01-16
+## [1.6.0, beta.1] - 2026-02-05
 ### Added
 - New Live Data Mode
 
 ### Fixed
 - Moved MIL checking to before a scan
-
+- Fixed update progress callback bug
+- Filxed mode dump suport for mode $01 values
 ---
 
 
