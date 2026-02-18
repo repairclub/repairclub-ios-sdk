@@ -1990,7 +1990,6 @@ public enum ConnectionCommands : Swift.String, Swift.CaseIterable {
   case endCapture
   case endDataSessionDescription
   case error
-  case endSession
   case freezeFrame
   case firmware
   case genericCodes
@@ -2159,8 +2158,18 @@ extension RepairClubSDK.VehicleDataDescriptor {
   public static func == (lhs: RepairClubSDK.VehicleDataDescriptor, rhs: RepairClubSDK.VehicleDataDescriptor) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
 }
+public enum VehicleStreamType : Swift.Equatable, Swift.Sendable, Swift.Codable {
+  case standard(mode: Swift.String, pid: Swift.String)
+  case advanced(ecuKey: Swift.String, valueKey: Swift.String)
+  public static func == (a: RepairClubSDK.VehicleStreamType, b: RepairClubSDK.VehicleStreamType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct VehicleDataStream : Swift.Codable, Swift.Identifiable, Swift.Sendable {
   public var id: Swift.String {
+    get
+  }
+  public var streamType: RepairClubSDK.VehicleStreamType {
     get
   }
   public var ecuKey: Swift.String
@@ -2379,7 +2388,7 @@ public struct ServiceAdvanced : Swift.Codable, Swift.Identifiable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum StreamRequestType : Swift.Sendable, Swift.Hashable {
-  case standard(pid: Swift.String)
+  case standard(mode: Swift.String, pid: Swift.String)
   case advanced(ecuKey: Swift.String, valueKey: Swift.String)
   case operation(name: Swift.String)
   public static func == (a: RepairClubSDK.StreamRequestType, b: RepairClubSDK.StreamRequestType) -> Swift.Bool
