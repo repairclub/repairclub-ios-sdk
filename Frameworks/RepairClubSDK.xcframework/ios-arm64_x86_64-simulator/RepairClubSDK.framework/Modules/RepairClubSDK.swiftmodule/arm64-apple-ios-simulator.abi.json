@@ -124599,105 +124599,105 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "Dictionary",
-      "offset": 984,
+      "offset": 1038,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 6773,
+      "offset": 6827,
       "length": 5,
       "value": "\"all\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 17166,
+      "offset": 17299,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 17197,
+      "offset": 17330,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 20327,
+      "offset": 20779,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 24314,
+      "offset": 24766,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 24323,
+      "offset": 24775,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 24332,
+      "offset": 24784,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 37229,
+      "offset": 38000,
       "length": 20,
       "value": "\"pro.repairclub.sdk\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 37261,
+      "offset": 38032,
       "length": 28,
       "value": "\"AdvancedValue::Operation::\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 37758,
+      "offset": 38529,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "Dictionary",
-      "offset": 38268,
+      "offset": 39039,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "StringLiteral",
-      "offset": 38324,
+      "offset": 39095,
       "length": 19,
       "value": "\"adv.value.pending\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "Array",
-      "offset": 38404,
+      "offset": 39175,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/AdvancedValueHandler.swift",
       "kind": "FloatLiteral",
-      "offset": 39936,
+      "offset": 40707,
       "length": 3,
       "value": "1.0"
     },
@@ -126078,7 +126078,7 @@
       "kind": "StringLiteral",
       "offset": 2322,
       "length": 5,
-      "value": "\"748\""
+      "value": "\"749\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -126475,14 +126475,14 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/DataStreamCoordinator.swift",
       "kind": "IntegerLiteral",
-      "offset": 40687,
+      "offset": 40545,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/DataStreamCoordinator.swift",
       "kind": "Dictionary",
-      "offset": 40876,
+      "offset": 40734,
       "length": 3,
       "value": "[]"
     },
