@@ -2659,6 +2659,8 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func subscribeToMode06SupportedMonitors(_ completionHandler: @escaping (RepairClubSDK.Result<[Swift.String], any Swift.Error>) -> Swift.Void)
   final public func requestMode06Monitors(shouldLoop: Swift.Bool = true)
   final public func endRequestMode06MonitorsTimer()
+  final public func subscribeToMode06MidsReady(_ completionHandler: @escaping (RepairClubSDK.Result<[Swift.String], any Swift.Error>) -> Swift.Void)
+  final public func requestMode06SupportedMids()
   final public func requestReadiness(mode: RepairClubSDK.ReadinessRequestMode = .standard, refresh: Swift.Bool = false) async throws -> [RepairClubSDK.ValueMonitor]
   final public func subscribeToReadinessUpdates(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
   final public func subscribeToMilChanges(_ completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
@@ -2829,6 +2831,9 @@ public struct ValueMonitor : Swift.Identifiable, Swift.Codable, Swift.Hashable, 
   public var valueInRange: RepairClubSDK.ValueInRange {
     get
   }
+  public var isCompleted: Swift.Bool {
+    get
+  }
   public var descriptiveLog: Swift.String {
     get
   }
@@ -2890,7 +2895,7 @@ public enum MonitorType : Swift.Codable, Swift.Sendable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum ValueInRange {
-  case belowRange, inRange, aboveRange, unavailable
+  case belowRange, inRange, aboveRange, unavailable, notCompleted
   public static func == (a: RepairClubSDK.ValueInRange, b: RepairClubSDK.ValueInRange) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
