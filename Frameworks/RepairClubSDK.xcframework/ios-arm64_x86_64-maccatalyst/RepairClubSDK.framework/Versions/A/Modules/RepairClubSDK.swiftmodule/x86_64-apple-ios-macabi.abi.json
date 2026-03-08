@@ -8472,6 +8472,80 @@
           },
           {
             "kind": "Var",
+            "name": "ISO_13400",
+            "printedName": "ISO_13400",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.BusType.Type) -> RepairClubSDK.BusType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BusType",
+                    "printedName": "RepairClubSDK.BusType",
+                    "usr": "s:13RepairClubSDK7BusTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.BusType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BusType",
+                        "printedName": "RepairClubSDK.BusType",
+                        "usr": "s:13RepairClubSDK7BusTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK7BusTypeO9ISO_13400yA2CmF",
+            "mangledName": "$s13RepairClubSDK7BusTypeO9ISO_13400yA2CmF",
+            "moduleName": "RepairClubSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "TCP",
+            "printedName": "TCP",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RepairClubSDK.BusType.Type) -> RepairClubSDK.BusType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BusType",
+                    "printedName": "RepairClubSDK.BusType",
+                    "usr": "s:13RepairClubSDK7BusTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RepairClubSDK.BusType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BusType",
+                        "printedName": "RepairClubSDK.BusType",
+                        "usr": "s:13RepairClubSDK7BusTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RepairClubSDK7BusTypeO3TCPyA2CmF",
+            "mangledName": "$s13RepairClubSDK7BusTypeO3TCPyA2CmF",
+            "moduleName": "RepairClubSDK"
+          },
+          {
+            "kind": "Var",
             "name": "unknown",
             "printedName": "unknown",
             "children": [
@@ -121510,308 +121584,322 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12638,
+      "offset": 10664,
+      "length": 11,
+      "value": "\"ISO_13400\""
+    },
+    {
+      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 10691,
+      "length": 5,
+      "value": "\"TCP\""
+    },
+    {
+      "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 12852,
       "length": 8,
       "value": "\"ecu_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12676,
+      "offset": 12890,
       "length": 16,
       "value": "\"technical_name\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12718,
+      "offset": 12932,
       "length": 12,
       "value": "\"request_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12754,
+      "offset": 12968,
       "length": 10,
       "value": "\"reply_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12792,
+      "offset": 13006,
       "length": 15,
       "value": "\"reply_id_mask\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12835,
+      "offset": 13049,
       "length": 14,
       "value": "\"gateway_type\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12877,
+      "offset": 13091,
       "length": 14,
       "value": "\"gateway_byte\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12919,
+      "offset": 13133,
       "length": 17,
       "value": "\"options_bitmask\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 12966,
+      "offset": 13180,
       "length": 16,
       "value": "\"accessory_byte\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 13010,
+      "offset": 13224,
       "length": 15,
       "value": "\"gw_request_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 13069,
+      "offset": 13283,
       "length": 13,
       "value": "\"gw_reply_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 13112,
+      "offset": 13326,
       "length": 16,
       "value": "\"associated_bus\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 16565,
+      "offset": 16779,
       "length": 7,
       "value": "\"0x7ff\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17109,
+      "offset": 17323,
       "length": 10,
       "value": "\"stage_id\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17147,
+      "offset": 17361,
       "length": 14,
       "value": "\"display_name\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17187,
+      "offset": 17401,
       "length": 12,
       "value": "\"stage_type\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17228,
+      "offset": 17442,
       "length": 16,
       "value": "\"stage_data_idx\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17275,
+      "offset": 17489,
       "length": 17,
       "value": "\"standard_length\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17326,
+      "offset": 17540,
       "length": 20,
       "value": "\"expected_responses\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 17401,
+      "offset": 17615,
       "length": 17,
       "value": "\"test_conditions\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 18412,
+      "offset": 18626,
       "length": 13,
       "value": "\"test_action\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 18914,
+      "offset": 19128,
       "length": 8,
       "value": "\"7f0000\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 18951,
+      "offset": 19165,
       "length": 8,
       "value": "\"ff0000\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 18987,
+      "offset": 19201,
       "length": 14,
       "value": "\"failedAndLog\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19408,
+      "offset": 19622,
       "length": 14,
       "value": "\"reply_length\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19452,
+      "offset": 19666,
       "length": 16,
       "value": "\"reply_contains\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19501,
+      "offset": 19715,
       "length": 21,
       "value": "\"reply_sid_pid_match\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19547,
+      "offset": 19761,
       "length": 11,
       "value": "\"reply_sid\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19583,
+      "offset": 19797,
       "length": 11,
       "value": "\"reply_pid\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19626,
+      "offset": 19840,
       "length": 19,
       "value": "\"reply_data_filter\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 19675,
+      "offset": 19889,
       "length": 17,
       "value": "\"reply_data_mask\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20278,
+      "offset": 20492,
       "length": 6,
       "value": "\"next\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20304,
+      "offset": 20518,
       "length": 10,
       "value": "\"No Codes\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20333,
+      "offset": 20547,
       "length": 8,
       "value": "\"decode\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20367,
+      "offset": 20581,
       "length": 15,
       "value": "\"commandFailed\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20407,
+      "offset": 20621,
       "length": 14,
       "value": "\"failedAndLog\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20445,
+      "offset": 20659,
       "length": 13,
       "value": "\"nrcResponse\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20484,
+      "offset": 20698,
       "length": 15,
       "value": "\"Ignore & Wait\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20519,
+      "offset": 20733,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20612,
+      "offset": 20826,
       "length": 5,
       "value": "\"+40\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20634,
+      "offset": 20848,
       "length": 5,
       "value": "\"+00\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 20657,
+      "offset": 20871,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 25200,
+      "offset": 25414,
       "length": 9382,
       "value": "\"{\n    \"creation_date\":\"\",\n    \"version\":\"12\",\n    \"engine_bundle\":[\n        222\n    ],\n    \"manufacturer_bundle\":[\n        420\n    ],\n    \"model_bundle\":[\n        68\n    ],\n    \"busses\":[\n        {\n            \"index\":0,\n            \"type\":\"CAN\",\n            \"bitrate\":\"500000\",\n            \"address_width\":11,\n            \"high_pin\":6,\n            \"low_pin\":14,\n            \"obd_type\":\"physical\",\n            \"keywords\":null,\n            \"request_minimum_delay\":0.01,\n            \"request_attempts\":2\n        },\n        {\n            \"index\":1,\n            \"type\":\"CAN\",\n            \"bitrate\":\"250000\",\n            \"address_width\":11,\n            \"high_pin\":3,\n            \"low_pin\":11,\n            \"obd_type\":\"physical\",\n            \"keywords\":null,\n            \"request_minimum_delay\":0.01,\n            \"request_attempts\":2\n        }\n    ],\n    \"ECUs\":[\n        {\n            \"index\":0,\n            \"name\":\"Accessory Protocol Interface Module\",\n            \"request_id\":\"0x7D0\",\n            \"reply_id\":\"0x7D8\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":0\n        },\n        {\n            \"index\":1,\n            \"name\":\"Body Control Module\",\n            \"request_id\":\"0x726\",\n            \"reply_id\":\"0x72E\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":0\n        },\n        {\n            \"index\":2,\n            \"name\":\"UNK\",\n            \"request_id\":\"0x736\",\n            \"reply_id\":\"0x73E\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":0\n        },\n        {\n            \"index\":3,\n            \"name\":\"Transfer Case Control Module\",\n            \"request_id\":\"0x761\",\n            \"reply_id\":\"0x769\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":4,\n            \"name\":\"OCS Module\",\n            \"request_id\":\"0x765\",\n            \"reply_id\":\"0x76D\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":5,\n            \"name\":\"Anti-lock Brake System\",\n            \"request_id\":\"0x760\",\n            \"reply_id\":\"0x768\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":6,\n            \"name\":\"Tire Pressure Monitoring System\",\n            \"request_id\":\"0x751\",\n            \"reply_id\":\"0x759\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":7,\n            \"name\":\"Front Control Interface Module\",\n            \"request_id\":\"0x7A7\",\n            \"reply_id\":\"0x7AF\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":8,\n            \"name\":\"Image Processing Module B\",\n            \"request_id\":\"0x7B1\",\n            \"reply_id\":\"0x7B9\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":9,\n            \"name\":\"Instrument Cluster\",\n            \"request_id\":\"0x720\",\n            \"reply_id\":\"0x728\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":10,\n            \"name\":\"Passenger Door Module\",\n            \"request_id\":\"0x741\",\n            \"reply_id\":\"0x749\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":11,\n            \"name\":\"Power Steering Control\",\n            \"request_id\":\"0x730\",\n            \"reply_id\":\"0x738\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":12,\n            \"name\":\"Steering Column Control Module\",\n            \"request_id\":\"0x724\",\n            \"reply_id\":\"0x72C\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":13,\n            \"name\":\"Trailer Brake Control\",\n            \"request_id\":\"0x757\",\n            \"reply_id\":\"0x75F\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        },\n        {\n            \"index\":14,\n            \"name\":\"Trailer Module\",\n            \"request_id\":\"0x799\",\n            \"reply_id\":\"0x7B9\",\n            \"reply_id_mask\":\"0x7ff\",\n            \"gateway_type\":0,\n            \"gateway_byte\":0,\n            \"associated_bus\":1\n        }\n    ],\n    \"advanced_operations\":[\n        {\n            \"operation_name\":\"Reset Battery\",\n            \"associated_ECUs\":[\n                11\n            ],\n            \"type\":\"command\",\n            \"messages\":[\n                {\n                    \"display_name\":\"Reset Battery\",\n                    \"standard_length\":0,\n                    \"expected_responses\":1,\n                    \"sid\":\"0x19\",\n                    \"pid\":\"0x00\",\n                    \"data\":\"0xFF\",\n                    \"result_test\":[\n                        {\n                            \"test\":{\n                                \"reply_length\":2\n                            },\n                            \"action\":\"command fail\",\n                            \"do_next\":\"last\"\n                        },\n                        {\n                            \"test\":{},\n                            \"action\":\"non-blocking send to server\",\n                            \"do_next\":\"last\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"operation_name\":\"Reset TPMS\",\n            \"associated_ECUs\":[\n                2\n            ],\n            \"type\":\"command\",\n            \"messages\":[\n                {\n                    \"display_name\":\"Reset TMPS\",\n                    \"standard_length\":0,\n                    \"expected_responses\":1,\n                    \"sid\":\"0x26\",\n                    \"pid\":\"0x7f\",\n                    \"data\":\"0x83\",\n                    \"result_test\":[\n                        {\n                            \"test\":{\n                                \"reply_length\":2\n                            },\n                            \"action\":\"command fail\",\n                            \"do_next\":\"last\"\n                        },\n                        {\n                            \"test\":{},\n                            \"action\":\"non-blocking send to server\",\n                            \"do_next\":\"last\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"operation_name\":\"UDS DTC Request\",\n            \"associated_ECUs\":[\n                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14\n            ],\n            \"type\":\"request\",\n            \"messages\":[\n                {\n                    \"display_name\":\"UDS: DTC Request by Status Mask\",\n                    \"standard_length\":0,\n                    \"expected_responses\":1,\n                    \"sid\":\"0x19\",\n                    \"pid\":\"0x02\",\n                    \"data\":\"0x8F\",\n                    \"result_test\":[\n                        {\n                            \"test\":{\n                                \"reply_length\":3\n                            },\n                            \"action\":\"no codes\",\n                            \"do_next\":\"last\"\n                        },\n                        {\n                            \"test\":{},\n                            \"action\":\"non-blocking send to server\",\n                            \"do_next\":\"last\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}\n\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/VehicleConfig.swift",
       "kind": "StringLiteral",
-      "offset": 34637,
+      "offset": 34851,
       "length": 13886,
       "value": "\"    {\n        \"creation_date\":\"\",\n        \"version\":32,\n        \"engine_bundle\":[\n            365\n        ],\n        \"manufacturer_bundle\":[\n            152\n        ],\n        \"model_bundle\":[\n            685\n        ],\n        \"busses\":[\n            {\n                \"index\":0,\n                \"type\":\"CAN\",\n                \"bitrate\":\"500000\",\n                \"address_width\":11,\n                \"high_pin\":6,\n                \"low_pin\":14,\n                \"obd_type\":\"functional\",\n                \"keywords\":null,\n                \"request_minimum_delay\":0.01,\n                \"request_attempts\":2\n            },\n            {\n                \"index\":1,\n                \"type\":\"ISO_Slow\",\n                \"bitrate\":\"104000\",\n                \"address_width\":null,\n                \"high_pin\":7,\n                \"low_pin\":15,\n                \"obd_type\":\"physical\",\n                \"keywords\":\"0xc5c5\",\n                \"request_minimum_delay\":0.1,\n                \"request_attempts\":2\n            }\n        ],\n        \"ECUs\":[\n            {\n                \"index\":0,\n                \"name\":\"Parking Guidance System\",\n                \"request_id\":\"0x796\",\n                \"reply_id\":\"0x79e\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":1,\n                \"name\":\"Weight Classification System\",\n                \"request_id\":\"0x7C3\",\n                \"reply_id\":\"0x7CB\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":2,\n                \"name\":\"Tire Pressure Monitoring System\",\n                \"request_id\":\"0x7C4\",\n                \"reply_id\":\"0x7CC\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":3,\n                \"name\":\"Instrument Cluster\",\n                \"request_id\":\"0x7C6\",\n                \"reply_id\":\"0x7CE\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":4,\n                \"name\":\"Air Conditioning\",\n                \"request_id\":\"0x7B3\",\n                \"reply_id\":\"0x7BB\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":5,\n                \"name\":\"Blind Spot Detection\",\n                \"request_id\":\"0x7B7\",\n                \"reply_id\":\"0x7BF\",\n                \"reply_id_mask\":\"0x7ff\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":0\n            },\n            {\n                \"index\":6,\n                \"name\":\"Engine\",\n                \"request_id\":\"0xC033F1\",\n                \"reply_id\":\"0xC0F133\",\n                \"reply_id_mask\":\"0xC0FFFF\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            },\n            {\n                \"index\":7,\n                \"name\":\"Electronic Stability Program\",\n                \"request_id\":\"0xC042F1\",\n                \"reply_id\":\"0xC0F142\",\n                \"reply_id_mask\":\"0xC0FFFF\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            },\n            {\n                \"index\":8,\n                \"name\":\"Safety Restraint System Airbag\",\n                \"request_id\":\"0xC037F1\",\n                \"reply_id\":\"0xC0F137\",\n                \"reply_id_mask\":\"0xC0FFEE\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            },\n            {\n                \"index\":9,\n                \"name\":\"Electric Power Steering\",\n                \"request_id\":\"0xC053F1\",\n                \"reply_id\":\"0xC0F153\",\n                \"reply_id_mask\":\"0xC0FFEE\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            },\n            {\n                \"index\":10,\n                \"name\":\"Transmission\",\n                \"request_id\":\"0xC034F1\",\n                \"reply_id\":\"0xC0F134\",\n                \"reply_id_mask\":\"0xC0FFEE\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            },\n            {\n                \"index\":11,\n                \"name\":\"Smart Junction Box\",\n                \"request_id\":\"0xC039F1\",\n                \"reply_id\":\"0xC0F139\",\n                \"reply_id_mask\":\"0xC0FFFF\",\n                \"gateway_type\":0,\n                \"gateway_byte\":0,\n                \"associated_bus\":1\n            }\n        ],\n        \"advanced_operations\":[\n            {\n                \"operation_name\":\"Reset Battery\",\n                \"associated_ECUs\":[\n                    11\n                ],\n                \"type\":\"command\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"Reset Battery\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x19\",\n                        \"pid\":\"0x04\",\n                        \"data\":\"0xFD\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"command fail\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"non-blocking send to server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"operation_name\":\"Reset TPMS\",\n                \"associated_ECUs\":[\n                    2\n                ],\n                \"type\":\"command\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"Reset TPMS\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x14\",\n                        \"pid\":\"0x24\",\n                        \"data\":\"0xFF\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"command fail\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"non-blocking send to server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"operation_name\":\"Clear UDS Codes\",\n                \"associated_ECUs\":[\n                    0, 1, 2, 3, 4, 5\n                ],\n                \"type\":\"command\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"Clear UDS codes\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x54\",\n                        \"pid\":\"0x64\",\n                        \"data\":\"0xC4\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":1\n                                },\n                                \"action\":\"command fail\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"non-blocking send to server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"operation_name\":\"UDS DTCs\",\n                \"associated_ECUs\":[\n                    0, 1, 2, 3, 4, 5, 7, 10\n                ],\n                \"type\":\"request\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"UDS: Start Extended Diagnostic Session\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x10\",\n                        \"pid\":\"0x03\",\n                        \"data\":\"\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2,\n                                    \"reply_contains\":\"0x34\",\n                                    \"reply_sid_pid_match\":\"true\",\n                                    \"reply_sid\":\"0x50\",\n                                    \"reply_pid\":\"0x03\",\n                                    \"reply_data_filter\":\"0x5000\",\n                                    \"reply_data_mask\":\"0xFF00\"\n                                },\n                                \"action\":\"no codes\",\n                                \"do_next\":\"False\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"non-blocking send to server\",\n                                \"do_next\":\"true\"\n                            }\n                        ]\n                    },\n                    {\n                        \"display_name\":\"UDS: DTC Request by Status Mask\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x19\",\n                        \"pid\":\"0x02\",\n                        \"data\":\"0x8F\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"no codes\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"blocking send to Server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"operation_name\":\"UDS Diagnostic Session\",\n                \"associated_ECUs\":[\n                    8, 9\n                ],\n                \"type\":\"request\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"UDS: Diagnostic Session Control, UNK\", \"standard_length\":0, \"expected_responses\":1, \"sid\":\"0x10\", \"pid\":\"0x90\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"no codes\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"blocking send to server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"operation_name\":\"Unknown\",\n                \"associated_ECUs\":[\n                    9\n                ],\n                \"type\":\"request\",\n                \"messages\":[\n                    {\n                        \"display_name\":\"UDS: UNK, UNK\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x18\",\n                        \"pid\":\"0x00\",\n                        \"data\":\"0x9000\",\n                        \"result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"no codes\",\n                                \"do_next\":\"true\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"blocking send to erver\",\n                                \"do_next\":\"true\"\n                            }\n                        ]\n                    },\n                    {\n                        \"display_name\":\"UDS: UNK, UNK\",\n                        \"standard_length\":0,\n                        \"expected_responses\":1,\n                        \"sid\":\"0x18\",\n                        \"pid\":\"0x00\",\n                        \"data\":\"0xFF00\",\n                        \"Result_test\":[\n                            {\n                                \"test\":{\n                                    \"reply_length\":2\n                                },\n                                \"action\":\"no codes\",\n                                \"do_next\":\"last\"\n                            },\n                            {\n                                \"test\":{},\n                                \"action\":\"blocking send to server\",\n                                \"do_next\":\"last\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\""
     },
@@ -126300,7 +126388,7 @@
       "kind": "StringLiteral",
       "offset": 2330,
       "length": 5,
-      "value": "\"752\""
+      "value": "\"753\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -150980,21 +151068,21 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 29708,
+      "offset": 29998,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 32768,
+      "offset": 33058,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 32797,
+      "offset": 33087,
       "length": 5,
       "value": "false"
     },

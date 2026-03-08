@@ -310,6 +310,8 @@ public enum BusType : Swift.String, Swift.Codable, Swift.Sendable {
   case J1708
   case FORD_FORCE_CAN1
   case H99B
+  case ISO_13400
+  case TCP
   case unknown
   public init(string: Swift.String) throws
   public var deviceRepresentation: Swift.String {
