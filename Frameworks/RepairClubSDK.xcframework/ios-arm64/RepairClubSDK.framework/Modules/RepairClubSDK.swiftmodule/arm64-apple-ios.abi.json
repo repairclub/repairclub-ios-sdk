@@ -120970,91 +120970,91 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 28640,
+      "offset": 28675,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 49684,
+      "offset": 49719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 73886,
+      "offset": 73921,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "Array",
-      "offset": 105128,
+      "offset": 105163,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 109743,
+      "offset": 109778,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 109766,
+      "offset": 109801,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 109786,
+      "offset": 109821,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "IntegerLiteral",
-      "offset": 128575,
+      "offset": 128610,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 134081,
+      "offset": 134116,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 134105,
+      "offset": 134140,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "FloatLiteral",
-      "offset": 139003,
+      "offset": 139038,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 146730,
+      "offset": 146765,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 146760,
+      "offset": 146795,
       "length": 5,
       "value": "false"
     },
@@ -126383,7 +126383,7 @@
       "kind": "StringLiteral",
       "offset": 2330,
       "length": 5,
-      "value": "\"753\""
+      "value": "\"755\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
