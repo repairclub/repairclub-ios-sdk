@@ -10,7 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.6.0, beta.8] - 2026-03-06
+## [1.6.1, beta.1] - 2026-03-26
+### Added
+- Added new Freeze Frame DTC direct request API - Alpha
+
+### Fixed
+- Fixed Freeze Frame Requests API
+
+---
+
+## [1.6.0] - 2026-03-06
 ### Added
 - New Live Data Mode
 - Added mode $06 MID names and TID names where available

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios15.5-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RepairClubSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import Combine
 import CommonCrypto
 import CoreBluetooth
@@ -433,6 +433,31 @@ public enum AVStreamError : Swift.Error, Foundation.LocalizedError, Swift.Sendab
   }
   #endif
 }
+public enum ModuleBusNetwork : Swift.String, Swift.Codable, Swift.Hashable, Swift.Sendable {
+  case hsCan
+  case msCan
+  case swCan
+  case can
+  case lin
+  case doip
+  case iso
+  case kwp2000
+  case j1850
+  case j1708
+  case tcp
+  case legacy
+  case unknown
+  public var displayName: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public struct ModuleItem : Swift.Identifiable, Swift.Codable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
   public var name: Swift.String
@@ -440,6 +465,8 @@ public struct ModuleItem : Swift.Identifiable, Swift.Codable, Swift.Hashable, Sw
   public var responseStatus: RepairClubSDK.ResponseStatus
   public var identifier: Swift.String
   public var errors: [RepairClubSDK.ErrorEntry]
+  public var technicalName: Swift.String?
+  public var busNetwork: RepairClubSDK.ModuleBusNetwork
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RepairClubSDK.ModuleItem, rhs: RepairClubSDK.ModuleItem) -> Swift.Bool
   public mutating func addTroubleCodeEntry(_ entry: RepairClubSDK.TroubleCodeEntry)
@@ -1661,13 +1688,15 @@ public enum SampleVehicle : Swift.String, Swift.Codable, Swift.CaseIterable {
     get
   }
 }
-public enum ConnectionState : Swift.Equatable {
+public enum ConnectionState : Swift.Equatable, Swift.Codable {
   case notStarted
   case started
   case completed
   case failed(any Swift.Error)
   case manuallyEntered
   public static func == (lhs: RepairClubSDK.ConnectionState, rhs: RepairClubSDK.ConnectionState) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
   public var succeeded: Swift.Bool {
     get
   }
@@ -1825,6 +1854,33 @@ public struct SupportTask {
   }
   #endif
   public init(code: Swift.String)
+}
+public struct FreezeFrameDTCResult {
+  public let ecuReplyAddress: Swift.String
+  public let frameIndexHex: Swift.String
+  public let rawDataField: Swift.String
+  public let rawHex: Swift.String
+  public let decodedDTC: Swift.String?
+  public let duration: Foundation.TimeInterval
+}
+public struct FreezeFrameSnapshotResult {
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry?
+  public let samples: [RepairClubSDK.VehicleDataSample]
+  public let isEmptyFrame: Swift.Bool
+  public let duration: Foundation.TimeInterval
+}
+public struct FunctionalTroubleCodeResult {
+  public let mode: Swift.String
+  public let ecuReplyAddress: Swift.String
+  public let rawDataField: Swift.String
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry
+  public let duration: Foundation.TimeInterval
+}
+public enum FreezeFrameUpdate {
+  case values([RepairClubSDK.ValueMonitor])
+  case unsupported
+  case completed
+  case unavailable
 }
 public struct TechTip : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
@@ -2597,6 +2653,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func returnDevices(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.DeviceItem], any Swift.Error>) -> Swift.Void)
   final public func connectToDevice(peripheral: CoreBluetooth.CBPeripheral, simple: Swift.Bool = false, _ connectionHandler: @escaping (RepairClubSDK.ConnectionEntry, RepairClubSDK.ConnectionStage, RepairClubSDK.ConnectionState) -> Swift.Void)
   final public func subscribeToDisconnections(completionHandler: @escaping () -> Swift.Void)
+  final public func subscribeToDisconnectionReasons(completionHandler: @escaping (Swift.String) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   final public func reconnectToPeripheral(with peripheralID: Foundation.UUID, _ completionHandler: @escaping (RepairClubSDK.Result<CoreBluetooth.CBPeripheral?, any Swift.Error>) -> Swift.Void)
   #endif
@@ -2669,8 +2726,14 @@ public struct RepairClubAPIResponse : Swift.Codable {
   #if compiler(>=5.3) && $NonescapableTypes
   final public func requestMilStatus() -> Swift.Result<Swift.Bool, any Swift.Error>
   #endif
-  final public func requestFreezeFrameFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], RepairClubSDK.CommonError>) -> Swift.Void)
-  final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
+  final public func requestFreezeFrameFor(code: RepairClubSDK.TroubleCodeEntry, callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], RepairClubSDK.CommonError>) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry? = nil, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
+  #endif
+  final public func requestFreezeFrame(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameUpdate, RepairClubSDK.CommonError>) -> Swift.Void)
+  final public func requestFreezeFrameDTC(useFunctionalAddress: Swift.Bool = true, handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FreezeFrameDTCResult], RepairClubSDK.CommonError>) -> Swift.Void)
+  final public func requestFreezeFrameSnapshot(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameSnapshotResult, RepairClubSDK.CommonError>) -> Swift.Void)
+  final public func requestFunctionalTroubleCodes(handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FunctionalTroubleCodeResult], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, quickGenericScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func startExtendedTroubleCodeScan(progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func stopTroubleCodeScan()
@@ -2981,6 +3044,7 @@ extension RepairClubSDK.CANBusODBType : Swift.RawRepresentable {}
 extension RepairClubSDK.BusType : Swift.Equatable {}
 extension RepairClubSDK.BusType : Swift.Hashable {}
 extension RepairClubSDK.BusType : Swift.RawRepresentable {}
+extension RepairClubSDK.ModuleBusNetwork : Swift.RawRepresentable {}
 extension RepairClubSDK.replySidPidMatchEnum : Swift.Equatable {}
 extension RepairClubSDK.replySidPidMatchEnum : Swift.Hashable {}
 extension RepairClubSDK.replySidPidMatchEnum : Swift.RawRepresentable {}
