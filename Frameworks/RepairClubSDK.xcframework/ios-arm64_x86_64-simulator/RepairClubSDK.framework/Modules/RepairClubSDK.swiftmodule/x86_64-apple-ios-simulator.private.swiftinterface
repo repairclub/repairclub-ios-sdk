@@ -262,8 +262,10 @@ public enum ObdTypeExtended : Swift.String, Swift.Codable, Swift.Sendable {
   case commActive29bit
   case commOBD11bit
   case commOBD11bitPhysical
+  case commOBD11bitUDS
   case commOBD29bit
   case commOBD29bitPhysical
+  case commOBD29bitUDS
   case commAll
   case unknown
   public init(string: Swift.String) throws
@@ -614,6 +616,44 @@ public struct DeviceItem : Swift.Identifiable, Swift.Hashable, Swift.Codable, Sw
     get
   }
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct FreezeFrameDTCResult {
+  public let ecuReplyAddress: Swift.String
+  public let frameIndexHex: Swift.String
+  public let rawDataField: Swift.String
+  public let rawHex: Swift.String
+  public let decodedDTC: Swift.String?
+  public let duration: Foundation.TimeInterval
+}
+public struct FreezeFrameSnapshotResult {
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry?
+  public let samples: [RepairClubSDK.VehicleDataSample]
+  public let isEmptyFrame: Swift.Bool
+  public let duration: Foundation.TimeInterval
+}
+public struct FunctionalTroubleCodeResult {
+  public let mode: Swift.String
+  public let ecuReplyAddress: Swift.String
+  public let rawDataField: Swift.String
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry
+  public let duration: Foundation.TimeInterval
+}
+public enum FrameRequestMode {
+  case burst
+  case sequential
+  case earlyExit
+  case streaming
+  public static func == (a: RepairClubSDK.FrameRequestMode, b: RepairClubSDK.FrameRequestMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FreezeFrameUpdate {
+  case values([RepairClubSDK.ValueMonitor])
+  case unsupported
+  case completed
+  case unavailable
 }
 public struct ErrorEntry : Swift.Identifiable, Swift.Codable, Swift.Hashable, Swift.Sendable {
   public var id: Swift.String
@@ -1855,33 +1895,6 @@ public struct SupportTask {
   #endif
   public init(code: Swift.String)
 }
-public struct FreezeFrameDTCResult {
-  public let ecuReplyAddress: Swift.String
-  public let frameIndexHex: Swift.String
-  public let rawDataField: Swift.String
-  public let rawHex: Swift.String
-  public let decodedDTC: Swift.String?
-  public let duration: Foundation.TimeInterval
-}
-public struct FreezeFrameSnapshotResult {
-  public let troubleCode: RepairClubSDK.TroubleCodeEntry?
-  public let samples: [RepairClubSDK.VehicleDataSample]
-  public let isEmptyFrame: Swift.Bool
-  public let duration: Foundation.TimeInterval
-}
-public struct FunctionalTroubleCodeResult {
-  public let mode: Swift.String
-  public let ecuReplyAddress: Swift.String
-  public let rawDataField: Swift.String
-  public let troubleCode: RepairClubSDK.TroubleCodeEntry
-  public let duration: Foundation.TimeInterval
-}
-public enum FreezeFrameUpdate {
-  case values([RepairClubSDK.ValueMonitor])
-  case unsupported
-  case completed
-  case unavailable
-}
 public struct TechTip : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
   public var action: Swift.String
@@ -2731,7 +2744,9 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry? = nil, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
   #endif
   final public func requestFreezeFrame(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameUpdate, RepairClubSDK.CommonError>) -> Swift.Void)
-  final public func requestFreezeFrameDTC(useFunctionalAddress: Swift.Bool = true, handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FreezeFrameDTCResult], RepairClubSDK.CommonError>) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func requestFreezeFrameDTC(useFunctionalAddress: Swift.Bool = true, mode: RepairClubSDK.FrameRequestMode = .earlyExit, onProgress: (([RepairClubSDK.FreezeFrameDTCResult]) -> Swift.Void)? = nil, handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FreezeFrameDTCResult], RepairClubSDK.CommonError>) -> Swift.Void)
+  #endif
   final public func requestFreezeFrameSnapshot(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameSnapshotResult, RepairClubSDK.CommonError>) -> Swift.Void)
   final public func requestFunctionalTroubleCodes(handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FunctionalTroubleCodeResult], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, quickGenericScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
@@ -3057,6 +3072,8 @@ extension RepairClubSDK.FirmwareReleaseType : Swift.RawRepresentable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.Equatable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.Hashable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.RawRepresentable {}
+extension RepairClubSDK.FrameRequestMode : Swift.Equatable {}
+extension RepairClubSDK.FrameRequestMode : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.Equatable {}
 extension RepairClubSDK.ErrorLevel : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.RawRepresentable {}
