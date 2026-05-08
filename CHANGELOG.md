@@ -10,12 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.6.1, beta.1] - 2026-03-26
+## [1.6.1] - 2026-05-08
 ### Added
 - Added new Freeze Frame DTC direct request API - Alpha
+- New module data
+- Added bus data to the modules
+- Added new connection log
+- Added new direct freeze frame request methods
+- Added DTC description source
 
 ### Fixed
 - Fixed Freeze Frame Requests API
+- Fixed the logging of disconnected scans
 
 ---
 

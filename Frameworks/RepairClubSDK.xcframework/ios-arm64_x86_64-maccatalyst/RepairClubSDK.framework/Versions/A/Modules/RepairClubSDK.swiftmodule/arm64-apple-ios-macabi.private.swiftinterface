@@ -779,6 +779,7 @@ public struct TroubleCodeEntry : Swift.Codable, Swift.Identifiable, Swift.Hashab
   public var dateUpdated: Foundation.Date?
   public var code: Swift.String
   public var description: Swift.String?
+  public var descriptionSource: RepairClubSDK.TroubleCodeDescriptionSource?
   public var statuses: [RepairClubSDK.CodeStatus]
   public var symptomByte: Swift.String?
   public var symptomByteDescription: Swift.String?
@@ -830,6 +831,18 @@ public struct TroubleCodeEntry : Swift.Codable, Swift.Identifiable, Swift.Hashab
   }
   public typealias ID = Swift.String
   public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TroubleCodeDescriptionSource : Swift.String, Swift.Codable, Swift.Sendable {
+  case userGenerated
+  case userApproved
+  case aiGenerated
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -1561,6 +1574,7 @@ public enum OperationStatus : Swift.String, Swift.Codable, Swift.Sendable {
   case started
   case ended
   case complete
+  case failed
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif
@@ -1975,6 +1989,7 @@ public struct DtcDetailResultCode : Swift.Codable {
   public var techTips: [RepairClubSDK.TechTip]?
   public var dtcLookupStatus: Swift.String?
   public var codeDescription: Swift.String?
+  public var descriptionSource: RepairClubSDK.TroubleCodeDescriptionSource?
   public var numExistingTechTips: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -3077,6 +3092,9 @@ extension RepairClubSDK.FrameRequestMode : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.Equatable {}
 extension RepairClubSDK.ErrorLevel : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.RawRepresentable {}
+extension RepairClubSDK.TroubleCodeDescriptionSource : Swift.Equatable {}
+extension RepairClubSDK.TroubleCodeDescriptionSource : Swift.Hashable {}
+extension RepairClubSDK.TroubleCodeDescriptionSource : Swift.RawRepresentable {}
 extension RepairClubSDK.DTCType : Swift.Equatable {}
 extension RepairClubSDK.DTCType : Swift.Hashable {}
 extension RepairClubSDK.DTCType : Swift.RawRepresentable {}
