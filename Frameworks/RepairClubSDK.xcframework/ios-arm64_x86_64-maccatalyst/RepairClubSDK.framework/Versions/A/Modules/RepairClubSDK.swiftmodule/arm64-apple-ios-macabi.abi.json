@@ -130211,7 +130211,7 @@
       "kind": "StringLiteral",
       "offset": 2330,
       "length": 5,
-      "value": "\"764\""
+      "value": "\"765\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -130657,21 +130657,21 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/DataStreamCoordinator.swift",
       "kind": "IntegerLiteral",
-      "offset": 41862,
+      "offset": 41853,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/DataStreamCoordinator.swift",
       "kind": "Array",
-      "offset": 42068,
+      "offset": 42059,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Features\/DataStreaming\/DataStreamCoordinator.swift",
       "kind": "Dictionary",
-      "offset": 42151,
+      "offset": 42142,
       "length": 3,
       "value": "[]"
     },
