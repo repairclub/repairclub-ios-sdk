@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.6.2] - 2026-05-15
+### Added
+
+### Fixed
+- Fixed new bus type parsing for vehicle configs
+
+---
+
 ## [1.6.1] - 2026-05-08
 ### Added
 - Added new Freeze Frame DTC direct request API - Alpha

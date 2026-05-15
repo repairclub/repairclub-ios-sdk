@@ -7,5 +7,4 @@ framework module RepairClubSDK {
 
 module RepairClubSDK.Swift {
   header "RepairClubSDK-Swift.h"
-  requires objc
 }

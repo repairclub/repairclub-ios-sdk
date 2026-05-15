@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target arm64-apple-ios15.5-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RepairClubSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.5-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RepairClubSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import Combine
 import CommonCrypto
 import CoreBluetooth
@@ -34,11 +34,9 @@ public enum ReadinessError : Foundation.LocalizedError {
   case sessionMissing
   case hardwareTimeout
   case invalidDataReceived
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
   public static func == (a: RepairClubSDK.ReadinessError, b: RepairClubSDK.ReadinessError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -81,11 +79,9 @@ public struct ScanEntry : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swi
   public var numberOfRespondedModules: Swift.Int {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var elapsedTime: Foundation.TimeInterval? {
     get
   }
-  #endif
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RepairClubSDK.ScanEntry, rhs: RepairClubSDK.ScanEntry) -> Swift.Bool
   public var formattedDescription: Swift.String {
@@ -107,9 +103,7 @@ extension RepairClubSDK.ScanEntry {
 extension UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency public static let delayShort: Swift.Double
   @_Concurrency.MainActor @preconcurrency public static let delayLong: Swift.Double
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showToast(_ text: Swift.String, delay: Foundation.TimeInterval = delayLong, action: (() -> Swift.Void)? = nil)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class TesterFormData {
   public var preFilledURL: Foundation.URL {
@@ -130,16 +124,12 @@ public struct AVStreamStatus : Swift.Sendable {
   public var hasTimeLimit: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var elapsedTime: Foundation.TimeInterval? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var progress: Swift.Double? {
     get
   }
-  #endif
   public static var inactive: RepairClubSDK.AVStreamStatus {
     get
   }
@@ -194,9 +184,7 @@ public struct VehicleInfoRequest {
   }
   public let reason: RepairClubSDK.VehicleInfoRequest.Reason
   public let completion: ((Swift.String?) -> Swift.Void)?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(reason: RepairClubSDK.VehicleInfoRequest.Reason, completion: ((Swift.String?) -> Swift.Void)? = nil)
-  #endif
 }
 public class TestingDataManager {
   public init()
@@ -207,28 +195,18 @@ public class TestingDataManager {
   public func setConnected(_ value: Swift.Bool)
   public func setEncryption(_ value: Swift.Bool)
   public func setBus(_ value: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setSP(_ value: Swift.Bool, count: Swift.Int? = nil)
-  #endif
   public func incrementSPCount()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setSM(_ value: Swift.Bool, count: Swift.Int? = nil)
-  #endif
   public func incrementSMCount()
   public func setReadiness(_ value: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setFreezeFrameReceived(_ value: Swift.Bool, count: Swift.Int? = nil)
-  #endif
   public func incrementFreezeFrameCount()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setMode06Received(_ value: Swift.Bool, count: Swift.Int? = nil)
-  #endif
   public func incrementMode06Count()
   public func setVehicleDecoded(_ value: Swift.Bool)
   public func setVehicleConfig(_ value: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func setLiveDataReceived(_ value: Swift.Bool, count: Swift.Int? = nil)
-  #endif
   public func incrementLiveDataCount()
   public func setClearSent(_ value: Swift.Bool)
   public func getAllData() -> [Swift.String : Any]
@@ -244,9 +222,7 @@ public enum AdvancedOperationType : Swift.String, Swift.Codable, Swift.Sendable 
   case firmware
   case connection
   case unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -272,9 +248,7 @@ public enum ObdTypeExtended : Swift.String, Swift.Codable, Swift.Sendable {
   public var deviceRepresentation: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -290,9 +264,7 @@ public enum CANBusODBType : Swift.String, Swift.Codable, Swift.Sendable {
   public var deviceRepresentation: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -315,13 +287,12 @@ public enum BusType : Swift.String, Swift.Codable, Swift.Sendable {
   case ISO_13400
   case TCP
   case unknown
+  public init(from decoder: any Swift.Decoder) throws
   public init(string: Swift.String) throws
   public var deviceRepresentation: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -331,9 +302,7 @@ public enum replySidPidMatchEnum : Swift.String, Swift.Codable, Swift.Sendable {
   case plus40
   case even
   case empty
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -344,9 +313,7 @@ public enum FirmwareUpdateStatus : Swift.String {
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -375,9 +342,7 @@ public enum FirmwareReleaseType : Swift.String, Swift.Codable, Swift.CaseIterabl
   public var id: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [RepairClubSDK.FirmwareReleaseType]
   public typealias ID = Swift.String
   public typealias RawValue = Swift.String
@@ -419,21 +384,15 @@ public enum AVStreamError : Swift.Error, Foundation.LocalizedError, Swift.Sendab
   case sessionDisconnected
   case slotAllocationFailed(reason: Swift.String)
   case noValidSlotsAfterValidation(originalCount: Swift.Int)
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var failureReason: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var recoverySuggestion: Swift.String? {
     get
   }
-  #endif
 }
 public enum ModuleBusNetwork : Swift.String, Swift.Codable, Swift.Hashable, Swift.Sendable {
   case hsCan
@@ -452,9 +411,7 @@ public enum ModuleBusNetwork : Swift.String, Swift.Codable, Swift.Hashable, Swif
   public var displayName: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -476,9 +433,7 @@ public struct ModuleItem : Swift.Identifiable, Swift.Codable, Swift.Hashable, Sw
     get
   }
   public mutating func updateResponseStatus(to newStatus: RepairClubSDK.ResponseStatus)
-  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func addCodeAndUpdateResponseStatus(code: RepairClubSDK.TroubleCodeEntry?, newStatus: RepairClubSDK.ResponseStatus?)
-  #endif
   public typealias ID = Foundation.UUID
   public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
@@ -509,9 +464,7 @@ public struct VehicleEntry : Swift.Codable, Swift.Identifiable, Swift.Hashable, 
   public var manualData: Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RepairClubSDK.VehicleEntry, rhs: RepairClubSDK.VehicleEntry) -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Foundation.UUID = UUID(), VIN: Swift.String, year: Swift.Int = 0, make: Swift.String = "", makeID: Swift.Int? = nil, model: Swift.String = "", modelID: Swift.Int? = nil, engine: Swift.String = "", dateAdded: Foundation.Date = Date(), lastScanDate: Foundation.Date? = nil, withDevice: Swift.Bool = true, vehiclePowertrainType: RepairClubSDK.VehiclePowertrainType = .unknown)
-  #endif
   public init(vinResult: RepairClubSDK.VINResult)
   public init(vinResult: RepairClubSDK.VINResult, vin: Swift.String)
   public init(apiResponse: RepairClubSDK.RepairClubAPIVINResponse)
@@ -581,9 +534,7 @@ public enum VehiclePowertrainType : Swift.String, Swift.Codable, Swift.Sendable 
   case diesel
   case gas
   case unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -601,12 +552,8 @@ public struct DeviceItem : Swift.Identifiable, Swift.Hashable, Swift.Codable, Sw
   public var lastConnectionDate: Foundation.Date?
   public var connectedVehicles: [RepairClubSDK.VehicleEntry]
   public var pastScans: [RepairClubSDK.ScanEntry]
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Foundation.UUID = UUID(), name: Swift.String, deviceIdentifier: Swift.String, hardwareIdentifier: Swift.String? = nil, apiLevel: Swift.String? = nil, device: CoreBluetooth.CBPeripheral? = nil, rssi: Swift.Int = 0, lastConnectionDate: Foundation.Date? = nil, connectedVehicles: [RepairClubSDK.VehicleEntry] = [], pastScans: [RepairClubSDK.ScanEntry] = [])
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(device: CoreBluetooth.CBPeripheral?, hardwareIdentifier: Swift.String? = nil, apiLevel: Swift.String? = nil)
-  #endif
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RepairClubSDK.DeviceItem, rhs: RepairClubSDK.DeviceItem) -> Swift.Bool
   public mutating func updateMAC(macString: Swift.String)
@@ -660,12 +607,8 @@ public struct ErrorEntry : Swift.Identifiable, Swift.Codable, Swift.Hashable, Sw
   public let error: RepairClubSDK.CommonError
   public let note: Swift.String?
   public let timestamp: Foundation.Date
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(error: RepairClubSDK.CommonError, timestamp: Foundation.Date, note: Swift.String? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(error: RepairClubSDK.CommonError, note: Swift.String? = nil)
-  #endif
   public var description: Swift.String {
     get
   }
@@ -688,9 +631,7 @@ public enum ErrorLevel : Swift.String, Swift.Codable {
   case internalLevel
   case externalLevel
   case userLevel
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -786,31 +727,17 @@ public struct TroubleCodeEntry : Swift.Codable, Swift.Identifiable, Swift.Hashab
   public var techTips: [RepairClubSDK.TechTip]?
   public var scanErrors: [RepairClubSDK.ErrorEntry]?
   public var detailStatus: RepairClubSDK.DetailStatus
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, description: Swift.String? = nil, detailStatus: RepairClubSDK.DetailStatus, errors: [RepairClubSDK.ErrorEntry]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, symptomByte: Swift.String?, description: Swift.String? = nil, detailStatus: RepairClubSDK.DetailStatus, errors: [RepairClubSDK.ErrorEntry]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, symptomByte: Swift.String, description: Swift.String? = nil, detailStatus: RepairClubSDK.DetailStatus, symptomByteDescription: Swift.String?, errors: [RepairClubSDK.ErrorEntry]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(result: RepairClubSDK.DtcDetailResultCode, status: [RepairClubSDK.CodeStatus], symptomByte: Swift.String?, detailStatus: RepairClubSDK.DetailStatus, errors: [RepairClubSDK.ErrorEntry]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(result: RepairClubSDK.TechTipResponse, detailStatus: RepairClubSDK.DetailStatus, errors: [RepairClubSDK.ErrorEntry]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, statuses: [RepairClubSDK.CodeStatus] = [], data: Foundation.Data? = nil, description: Swift.String? = nil, techTips: [RepairClubSDK.TechTip] = [], errors: [RepairClubSDK.ErrorEntry]? = nil, detailStatus: RepairClubSDK.DetailStatus)
-  #endif
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RepairClubSDK.TroubleCodeEntry, rhs: RepairClubSDK.TroubleCodeEntry) -> Swift.Bool
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func updateDescription(with result: RepairClubSDK.DTCResult?)
-  #endif
   public mutating func updateInfo(with updatedDetails: RepairClubSDK.TroubleCodeEntry)
   public mutating func add(techTips: [RepairClubSDK.TechTip])
   public mutating func removeTechTips()
@@ -838,9 +765,7 @@ public enum TroubleCodeDescriptionSource : Swift.String, Swift.Codable, Swift.Se
   case userGenerated
   case userApproved
   case aiGenerated
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -850,9 +775,7 @@ public enum DTCType : Swift.String, Swift.Codable {
   case confirmed
   case pending
   case none
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -868,9 +791,7 @@ public enum CodeStatus : Swift.String, Swift.Codable, Swift.Sendable {
   case testNotCompletedThisOperationCycle
   case testFailedThisOperationCycle
   case testNotCompletedSinceLastClear
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func statusType(from string: Swift.String) -> RepairClubSDK.CodeStatus?
-  #endif
   public var statusCategory: RepairClubSDK.CodeStatusCategory {
     get
   }
@@ -880,9 +801,7 @@ public enum CodeStatus : Swift.String, Swift.Codable, Swift.Sendable {
   public var sortPriority: Swift.Int {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -910,9 +829,7 @@ public enum CodeStatusCategory {
 }
 public enum ProcessedState : Swift.String, Swift.Codable {
   case initial, partial, complete
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -932,9 +849,7 @@ public struct DTCResult : Swift.Codable, Swift.Identifiable {
 }
 public enum DetailStatus : Swift.String, Swift.Codable, Swift.Sendable {
   case notStart, started, retrying, failed, partial, complete
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -972,9 +887,7 @@ public enum VinDecodeSource : Swift.String, Swift.Codable {
   case nhtsa
   case cache
   case other
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1066,11 +979,9 @@ public struct VehicleRecallResult : Swift.Codable, Swift.Hashable, Swift.Identif
   public var ModelYear: Swift.String
   public var Make: Swift.String
   public var Model: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public var reportDate: Foundation.Date? {
     get
   }
-  #endif
   public var reportDateString: Swift.String {
     get
   }
@@ -1302,9 +1213,7 @@ public struct ModelResult : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension RepairClubSDK.SessionLog {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func jsonRepresentation(prettyPrint: Swift.Bool) -> Swift.String?
-  #endif
 }
 extension RepairClubSDK.SessionLog : Swift.Equatable {
   public static func == (lhs: RepairClubSDK.SessionLog, rhs: RepairClubSDK.SessionLog) -> Swift.Bool
@@ -1533,9 +1442,7 @@ public struct OTAFirmwareUpdateLog : Swift.Identifiable, Swift.Codable {
     case failed
     case started
     case notStarted
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -1575,9 +1482,7 @@ public enum OperationStatus : Swift.String, Swift.Codable, Swift.Sendable {
   case ended
   case complete
   case failed
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1597,9 +1502,7 @@ public enum ScanType : Swift.String, Swift.Codable, Swift.Sendable {
   public var labelString: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1610,9 +1513,7 @@ public protocol LogItem {
   var date: Foundation.Date { get }
   var logs: [Swift.String] { get }
   var name: Swift.String { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   func jsonRepresentation(prettyPrint: Swift.Bool) -> Swift.String?
-  #endif
 }
 public struct DataSourceLog : RepairClubSDK.LogItem, Swift.Codable {
   public var id: Foundation.UUID
@@ -1623,9 +1524,7 @@ public struct DataSourceLog : RepairClubSDK.LogItem, Swift.Codable {
   public var logs: [Swift.String] {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public func jsonRepresentation(prettyPrint: Swift.Bool) -> Swift.String?
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1635,9 +1534,7 @@ public enum StructuredLogType : Swift.String, Swift.Codable {
   case advOpOperation
   case messages
   case sessionLog
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1646,9 +1543,7 @@ public enum StructuredLogType : Swift.String, Swift.Codable {
 public enum StructeredLogStatus : Swift.String, Swift.Codable {
   case busReceivedFromDevice, busSuccessfullyEstablished, busFailedToEstablished
   case advOpOperation
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1659,9 +1554,7 @@ public enum StructeredLogAction : Swift.String, Swift.Codable {
   case errorTimeOut, errorDenied, errorBlankReply, errorQueuingNoEstablishedBus
   case testFailed, testPassed
   case next, decode, failedAndLog, commandFailed, unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1670,9 +1563,7 @@ public enum StructeredLogAction : Swift.String, Swift.Codable {
 public protocol Convertable : Swift.Decodable, Swift.Encodable {
 }
 extension RepairClubSDK.Convertable {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func convertToDict() -> Swift.Dictionary<Swift.String, Any>?
-  #endif
 }
 public struct Mode6Item : Swift.Codable, Swift.Identifiable, Swift.Hashable {
   public var id: Foundation.UUID
@@ -1722,17 +1613,15 @@ public enum SampleVehicle : Swift.String, Swift.Codable, Swift.CaseIterable {
   case chevroletMalibu2022
   case chevroletSuburban2023
   case fordF1502018
+  case jaguarFPace2019
+  case volvoXC402024
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var vin: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [RepairClubSDK.SampleVehicle]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [RepairClubSDK.SampleVehicle] {
@@ -1841,9 +1730,7 @@ public enum BluetoothStatus : Swift.String, Swift.Codable {
   public var icon: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1897,16 +1784,12 @@ public struct SupportTask {
   public var code: Swift.String
   public var type: RepairClubSDK.SupportTask.SupportTaskType
   public var part: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var partString: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var linkString: Swift.String? {
     get
   }
-  #endif
   public init(code: Swift.String)
 }
 public struct TechTip : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
@@ -1934,9 +1817,7 @@ extension RepairClubSDK.TechTip {
     case other
     public init(from decoder: any Swift.Decoder) throws
     public func encode(to encoder: any Swift.Encoder) throws
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -2011,16 +1892,12 @@ public struct TechTipsSection : Swift.Hashable, Swift.Identifiable, Swift.Codabl
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class KeyboardLayoutGuide : UIKit.UILayoutGuide {
   @_Concurrency.MainActor @preconcurrency public var baseHeight: CoreFoundation.CGFloat
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var owningView: UIKit.UIView? {
     @objc get
     @objc set
   }
-  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
   @objc deinit
 }
 public struct Keyboard {
@@ -2028,9 +1905,7 @@ public struct Keyboard {
   }
 }
 extension UIKit.UIView {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public class func animateAlongside(keyboardAnimation: RepairClubSDK.Keyboard.Animation, options: UIKit.UIView.AnimationOptions = [], delay: Foundation.TimeInterval = 0, animations: @escaping () -> Swift.Void, completion: ((_ finished: Swift.Bool) -> Swift.Void)? = nil)
-  #endif
 }
 @_hasMissingDesignatedInitializers public class NotificationObserver {
   @objc deinit
@@ -2042,14 +1917,10 @@ extension UIKit.UIView : RepairClubSDK.AutoLayoutElement {
 extension UIKit.UILayoutGuide : RepairClubSDK.AutoLayoutElement {
 }
 extension UIKit.NSLayoutConstraint {
-  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(_ view1: any RepairClubSDK.AutoLayoutElement, _ attribute1: UIKit.NSLayoutConstraint.Attribute, _ relation: UIKit.NSLayoutConstraint.Relation = .equal, to view2: (any RepairClubSDK.AutoLayoutElement)?, _ attribute2: UIKit.NSLayoutConstraint.Attribute? = nil, multiplier: CoreFoundation.CGFloat = 1, constant: CoreFoundation.CGFloat = 0)
-  #endif
 }
 extension RepairClubSDK.AutoLayoutElement {
-  #if compiler(>=5.3) && $NonescapableTypes
   public func constraint(_ attribute: UIKit.NSLayoutConstraint.Attribute, _ relation: UIKit.NSLayoutConstraint.Relation = .equal, to anotherView: (any RepairClubSDK.AutoLayoutElement)?, _ anotherViewAttribute: UIKit.NSLayoutConstraint.Attribute? = nil, multiplier: CoreFoundation.CGFloat = 1, constant: CoreFoundation.CGFloat = 0) -> UIKit.NSLayoutConstraint
-  #endif
 }
 extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public func constraintEdges(to view: UIKit.UIView) -> [UIKit.NSLayoutConstraint]
@@ -2094,9 +1965,7 @@ public enum ConnectionCommands : Swift.String, Swift.CaseIterable {
   case diagnosticTroubleCode
   case vehicleIdentificationNumber
   case waitRequest
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [RepairClubSDK.ConnectionCommands]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [RepairClubSDK.ConnectionCommands] {
@@ -2129,24 +1998,18 @@ public enum VehicleDataValueFormat : Swift.String, Swift.Codable, Swift.Sendable
   case text
   case enumeration
   case raw
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 extension RepairClubSDK.VehicleDataStream {
-  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func append(_ sample: RepairClubSDK.VehicleDataSample, keepingLast limit: Swift.Int? = nil)
-  #endif
   public func lastSamples(limit: Swift.Int) -> [RepairClubSDK.VehicleDataSample]
-  #if compiler(>=5.3) && $NonescapableTypes
   public var latestSample: RepairClubSDK.VehicleDataSample? {
     get
   }
-  #endif
 }
 public struct VehicleDataSample : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
@@ -2154,12 +2017,8 @@ public struct VehicleDataSample : Swift.Codable, Swift.Identifiable, Swift.Hasha
   public var unit: Swift.String?
   public var date: Foundation.Date
   public var value: RepairClubSDK.VehicleDataValueType
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, unit: Swift.String? = nil, date: Foundation.Date = Date(), value: RepairClubSDK.VehicleDataValueType)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.String, unit: Swift.String? = nil, date: Foundation.Date = Date(), value: Swift.Double)
-  #endif
   public typealias ID = Foundation.UUID
   public func encode(to encoder: any Swift.Encoder) throws
   public func hash(into hasher: inout Swift.Hasher)
@@ -2169,11 +2028,9 @@ public struct VehicleDataSample : Swift.Codable, Swift.Identifiable, Swift.Hasha
   public init(from decoder: any Swift.Decoder) throws
 }
 extension RepairClubSDK.VehicleDataSample {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var numericValue: Swift.Double? {
     get
   }
-  #endif
   public var stringValue: Swift.String {
     get
   }
@@ -2200,37 +2057,21 @@ public struct VehicleDataDescriptor : Swift.Codable, Swift.Identifiable, Swift.H
   public var useSetMax: Swift.Bool
   public var valueFormat: RepairClubSDK.VehicleDataValueFormat
   public var enumerationMap: [Swift.String : Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String, pidCode: Swift.String, ecuKey: Swift.String = VehicleDataDescriptor.defaultEcuKey, name: Swift.String, unit: Swift.String, shortName: Swift.String? = nil, min: Swift.Double? = nil, max: Swift.Double? = nil, dynamicStartMin: Swift.Double? = nil, dynamicStartMax: Swift.Double? = nil, isAvailable: Swift.Bool = false, useSetMin: Swift.Bool = true, useSetMax: Swift.Bool = true, positionLeading: Swift.Bool = true, convertableUnits: RepairClubSDK.ConvertableUnits? = nil, color: UIKit.UIColor? = nil, valueFormat: RepairClubSDK.VehicleDataValueFormat = .numeric, enumerationMap: [Swift.String : Swift.String]? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String, ecuKey: Swift.String = VehicleDataDescriptor.defaultEcuKey, name: Swift.String, unit: Swift.String, shortName: Swift.String? = nil, min: Swift.Double? = nil, max: Swift.Double? = nil, dynamicStartMin: Swift.Double? = nil, dynamicStartMax: Swift.Double? = nil, isAvailable: Swift.Bool = false, useSetMin: Swift.Bool = true, useSetMax: Swift.Bool = true, positionLeading: Swift.Bool = true, convertableUnits: RepairClubSDK.ConvertableUnits? = nil, color: UIKit.UIColor? = nil, valueFormat: RepairClubSDK.VehicleDataValueFormat = .numeric, enumerationMap: [Swift.String : Swift.String]? = nil)
-  #endif
   public init(source: RepairClubSDK.VehicleDataDescriptor, uiColor: UIKit.UIColor, positionLeading: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String, ecuKey: Swift.String = VehicleDataDescriptor.defaultEcuKey, name: Swift.String, shortName: Swift.String? = nil, isAvailable: Swift.Bool = true, useSetMin: Swift.Bool = true, useSetMax: Swift.Bool = true, valueFormat: RepairClubSDK.VehicleDataValueFormat = .numeric, enumerationMap: [Swift.String : Swift.String]? = nil)
-  #endif
   public var displayName: Swift.String {
     get
   }
   public var requestCode: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public func minConverted(shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func maxConverted(shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func dynamicStartMinConverted(shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func dynamicStartMaxConverted(shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func converted(valueIn: Swift.Double?, shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
   public func convertedUnit(shouldConvert: Swift.Bool) -> Swift.String
   public func decodeLiveValue(from raw: Swift.String) -> RepairClubSDK.VehicleDataValueType
   public typealias ID = Swift.String
@@ -2266,9 +2107,7 @@ public struct VehicleDataStream : Swift.Codable, Swift.Identifiable, Swift.Senda
   public var technicalName: Swift.String?
   public var displayName: Swift.String?
   public var values: [RepairClubSDK.VehicleDataSample]
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(ecuKey: Swift.String, ecuIdentifier: Swift.String, valueKey: Swift.String, valueIdentifier: Swift.String, unit: Swift.String? = nil, technicalName: Swift.String? = nil, displayName: Swift.String? = nil, values: [RepairClubSDK.VehicleDataSample] = [])
-  #endif
   public typealias ID = Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -2293,9 +2132,7 @@ extension UIKit.UIDevice {
     case iPhone_12ProMax_13ProMax
     case iPhone_13Mini
     case unknown
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
-    #endif
     @available(iOS 2.0, macCatalyst 13.1, *)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2309,7 +2146,7 @@ extension UIKit.UIDevice {
   @_Concurrency.MainActor @preconcurrency public func isScreenBig() -> Swift.Bool
 }
 public class ObservableArray<T> : Combine.ObservableObject {
-  @Combine.Published @_projectedValueProperty($array) public var array: [T] {
+  @Combine.Published<[T]> @_projectedValueProperty($array) public var array: [T] {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
@@ -2584,9 +2421,7 @@ public enum ResponseStatus : Swift.String, Swift.Codable, Swift.Equatable, Swift
   case nrcResponse
   case didNotRespond
   case unknown
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2639,42 +2474,30 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public var repairClubSdkBuild: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  @Combine.Published @_projectedValueProperty($firmwareUpdateProgress) final public var firmwareUpdateProgress: RepairClubSDK.FirmwareProgress? {
+  @Combine.Published<RepairClubSDK.FirmwareProgress?> @_projectedValueProperty($firmwareUpdateProgress) final public var firmwareUpdateProgress: RepairClubSDK.FirmwareProgress? {
     get
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     set
     @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
     _modify
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var $firmwareUpdateProgress: Combine.Published<RepairClubSDK.FirmwareProgress?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var sessionID: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var deviceItem: RepairClubSDK.DeviceItem? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var deviceID: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public var deviceFirmwareVersion: Swift.String? {
     get
   }
-  #endif
   final public func configureSDK(tokenString: Swift.String, appName: Swift.String, appVersion: Swift.String, userID: Swift.String)
   final public func configureSdkUser(userID: Swift.String)
   final public func updateApp(state: RepairClubSDK.AppForegroundState)
@@ -2682,15 +2505,9 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func connectToDevice(peripheral: CoreBluetooth.CBPeripheral, simple: Swift.Bool = false, _ connectionHandler: @escaping (RepairClubSDK.ConnectionEntry, RepairClubSDK.ConnectionStage, RepairClubSDK.ConnectionState) -> Swift.Void)
   final public func subscribeToDisconnections(completionHandler: @escaping () -> Swift.Void)
   final public func subscribeToDisconnectionReasons(completionHandler: @escaping (Swift.String) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func reconnectToPeripheral(with peripheralID: Foundation.UUID, _ completionHandler: @escaping (RepairClubSDK.Result<CoreBluetooth.CBPeripheral?, any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func disconnectFromDevice() -> (Swift.Bool, (any Swift.Error)?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func currentDevice() -> RepairClubSDK.DeviceItem?
-  #endif
   final public func registerDeviceConnectionState(changes completionHandler: @escaping (RepairClubSDK.DeviceConnectionState) -> Swift.Void)
   final public func registerVehicleConnectionState(changes completionHandler: @escaping (RepairClubSDK.VehicleConnectionState) -> Swift.Void)
   final public func registerBluetoothStatus(changes completionHandler: @escaping (RepairClubSDK.BluetoothStatus) -> Swift.Void)
@@ -2699,21 +2516,13 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func retryFetchingTheVIN()
   final public func retryDecodingTheVIN()
   final public func retryTheVehicleConfig()
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func retryBusSync(completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void) -> Swift.Bool
-  #endif
   final public func subscribeToSDKErrors(callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ErrorEntry], any Swift.Error>) -> Swift.Void)
   final public func subscribeToLatestError(callback completionHandler: @escaping (RepairClubSDK.Result<RepairClubSDK.ErrorEntry, any Swift.Error>) -> Swift.Void)
   final public func registerVIN(callback completionHandler: @escaping (RepairClubSDK.Result<Swift.String, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func registerVehicle(callback completionHandler: @escaping (RepairClubSDK.Result<RepairClubSDK.VehicleEntry?, any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func supplyVehicleInformation(vin: Swift.String?, vehicleEntry: RepairClubSDK.VehicleEntry?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getCurrentVehicleEntry() -> RepairClubSDK.VehicleEntry?
-  #endif
   final public func setCurrentVehicleToA(manual vehicle: RepairClubSDK.VehicleEntry)
   final public func requestVIN() -> RepairClubSDK.Result<Swift.String, any Swift.Error>
   final public func subscribeToLiveStream(_ completionHandler: @escaping (RepairClubSDK.Result<[Swift.String : RepairClubSDK.VehicleDataStream], any Swift.Error>) -> Swift.Void)
@@ -2732,9 +2541,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestDataPoint(pid: Swift.String, oldAndNew: Swift.Bool = false, callback: @escaping (Swift.String) -> Swift.Void)
   final public func advancedValueCatalog() -> [RepairClubSDK.AVECU]
   final public func advancedValueOperationCatalog(set: Swift.String) -> [RepairClubSDK.AVECU]
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func startUnifiedStream(standardPids: [Swift.String] = [], advancedKeys: [(ecuKey: Swift.String, valueKey: Swift.String)] = [], operations: [Swift.String] = [], duration: Foundation.TimeInterval? = nil, validateStandard: Swift.Bool = false, validateAdvanced: Swift.Bool = false, excludedTypes: [RepairClubSDK.VehicleDataValueType] = [.noData, .nrc("Any")], onUpdate: @escaping ([RepairClubSDK.VehicleDataStream]) -> Swift.Void) throws
-  #endif
   final public func stopUnifiedStream()
   final public var advancedValueAvailableSlots: Swift.Int {
     get
@@ -2751,26 +2558,18 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func requestReadiness(mode: RepairClubSDK.ReadinessRequestMode = .standard, refresh: Swift.Bool = false) async throws -> [RepairClubSDK.ValueMonitor]
   final public func subscribeToReadinessUpdates(_ completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], any Swift.Error>) -> Swift.Void)
   final public func subscribeToMilChanges(_ completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func requestMilStatus() -> Swift.Result<Swift.Bool, any Swift.Error>
-  #endif
   final public func requestFreezeFrameFor(code: RepairClubSDK.TroubleCodeEntry, callback completionHandler: @escaping (RepairClubSDK.Result<[RepairClubSDK.ValueMonitor], RepairClubSDK.CommonError>) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func requestFreezeFrameValuesFor(code: RepairClubSDK.TroubleCodeEntry, scanEntry: RepairClubSDK.ScanEntry? = nil, valueCompletionHandler: @escaping (RepairClubSDK.Result<[Swift.String : Swift.Double], RepairClubSDK.CommonError>) -> Swift.Void)
-  #endif
   final public func requestFreezeFrame(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameUpdate, RepairClubSDK.CommonError>) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func requestFreezeFrameDTC(useFunctionalAddress: Swift.Bool = true, mode: RepairClubSDK.FrameRequestMode = .earlyExit, onProgress: (([RepairClubSDK.FreezeFrameDTCResult]) -> Swift.Void)? = nil, handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FreezeFrameDTCResult], RepairClubSDK.CommonError>) -> Swift.Void)
-  #endif
   final public func requestFreezeFrameSnapshot(for code: RepairClubSDK.TroubleCodeEntry, handler: @escaping (RepairClubSDK.Result<RepairClubSDK.FreezeFrameSnapshotResult, RepairClubSDK.CommonError>) -> Swift.Void)
   final public func requestFunctionalTroubleCodes(handler: @escaping (RepairClubSDK.Result<[RepairClubSDK.FunctionalTroubleCodeResult], RepairClubSDK.CommonError>) -> Swift.Void)
   final public func startTroubleCodeScan(advancedScan: Swift.Bool = false, quickGenericScan: Swift.Bool = false, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func startExtendedTroubleCodeScan(progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
   final public func stopTroubleCodeScan()
   final public func pvcop(input: Swift.Int, progressHandler: @escaping (RepairClubSDK.ScanProgressUpdate) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func fetchDTCDescription(for code: Swift.String, on vehicle: RepairClubSDK.VehicleEntry) async -> RepairClubSDK.Result<RepairClubSDK.DTCResult?, any Swift.Error>
-  #endif
   final public func fetchDTCDescription(for code: Swift.String, on vehicle: RepairClubSDK.VehicleEntry, completion: @escaping (RepairClubSDK.Result<RepairClubSDK.DTCResult, any Swift.Error>) -> Swift.Void)
   final public func requestVinDecode(for vin: Swift.String) async throws -> RepairClubSDK.VINResult
   final public func requestVinDetailDecode(for vin: Swift.String, completionHandler: @escaping (RepairClubSDK.Result<RepairClubSDK.VINDetailResult, any Swift.Error>) -> Swift.Void)
@@ -2782,13 +2581,9 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func clearGenericCodes(completionHandler: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   final public func clearAllCodes(progressHandler: @escaping (RepairClubSDK.OperationProgressUpdate) -> Swift.Void) throws
   final public func fetchAvailableServices(completion: @escaping (RepairClubSDK.ServiceOption) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func fetchAvailableServices() -> [RepairClubSDK.ServiceAdvanced]?
-  #endif
   final public func startService(service: RepairClubSDK.ServiceAdvanced, progressHandler: @escaping (RepairClubSDK.OperationProgressUpdate) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func returnFormData(for scan: RepairClubSDK.ScanEntry) -> RepairClubSDK.TesterFormData?
-  #endif
   final public func configureSDK(with configuration: RepairClubSDK.SDKConfiguration)
   final public func returnDevInfo(with key: Swift.String, completionHandler: @escaping (RepairClubSDK.Result<Any, any Swift.Error>) -> Swift.Void)
   final public func returnDevInfoAsync(with key: Swift.String) async throws -> Any
@@ -2811,23 +2606,13 @@ public struct RepairClubAPIResponse : Swift.Codable {
   final public func setSampleVehicleOnSim(_ vehicle: RepairClubSDK.SampleVehicle)
   final public func set(_ text: Swift.String)
   final public func subscribeToFirmwareProgress(_ completionHandler: @escaping (RepairClubSDK.FirmwareProgress) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func startDeviceFirmwareUpdate(to version: Swift.String? = nil, reqReleaseLevel: RepairClubSDK.FirmwareReleaseType? = nil, authKey: Swift.String? = nil, progressCallback: @escaping (Swift.Double) -> Swift.Void, completionCallback: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
-  #endif
   final public func cancelDeviceFirmwareUpdate(completionCallback: @escaping (RepairClubSDK.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   final public func stopDeviceFirmwareUpdate()
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getFirmwareLatestVersionDetails(completion: @escaping (RepairClubSDK.FirmwareInformationDetail?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getFirmwareLatestVersionDetails() async throws -> RepairClubSDK.FirmwareInformationDetail?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getDeviceFirmwareVersion() -> RepairClubSDK.Result<Swift.String?, any Swift.Error>
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func getNewestAvailableFirmwareVersion() -> RepairClubSDK.Result<Swift.String?, any Swift.Error>
-  #endif
   final public func startDemoMode(demoOn: Swift.Bool, _ connectionHandler: @escaping (RepairClubSDK.ConnectionEntry, RepairClubSDK.ConnectionStage, RepairClubSDK.ConnectionState) -> Swift.Void)
   final public func stopDemoMode()
   final public func clearKeyCache() async
@@ -2895,11 +2680,9 @@ public struct FirmwareInformationDetail : Swift.Decodable, Swift.Sendable {
   public let version: Swift.String
   public let firmwareStatus: Swift.String?
   public let externalReleaseNotes: [Swift.String]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public var status: RepairClubSDK.FirmwareReleaseType? {
     get
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct ValueMonitor : Swift.Identifiable, Swift.Codable, Swift.Hashable, Swift.Equatable, Swift.Sendable {
@@ -2920,9 +2703,7 @@ public struct ValueMonitor : Swift.Identifiable, Swift.Codable, Swift.Hashable, 
   public var DTCs: [Swift.String]?
   public var readinessBitMap: [Swift.String]?
   public var readinessStatus: [Swift.Bool]?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Swift.String = UUID().uuidString, type: RepairClubSDK.MonitorType, modeID: Swift.String, valueID: Swift.String, valueName: Swift.String, cid: Swift.String? = nil, cidName: Swift.String? = nil, unit: Swift.String, name: Swift.String, description: Swift.String, status: Swift.Bool, values: [RepairClubSDK.VehicleDataSample], min: Swift.Double? = nil, max: Swift.Double? = nil, DTCs: [Swift.String]? = nil, readinessBitMap: [Swift.String]? = nil, readinessStatus: [Swift.Bool]? = nil)
-  #endif
   public var valueInRange: RepairClubSDK.ValueInRange {
     get
   }
@@ -2945,11 +2726,9 @@ public struct ValueMonitor : Swift.Identifiable, Swift.Codable, Swift.Hashable, 
   public var isMIL: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var isMilOn: Swift.Bool? {
     get
   }
-  #endif
   public var monitorCompleteness: Swift.String {
     get
   }
@@ -2963,9 +2742,7 @@ public struct ValueMonitor : Swift.Identifiable, Swift.Codable, Swift.Hashable, 
     get
   }
   public func codeID(currentMode: RepairClubSDK.ModeType = .mode01) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func currentValue(shouldConvert: Swift.Bool) -> Swift.Double?
-  #endif
   public func convertedUnit(shouldConvert: Swift.Bool) -> Swift.String
   public var itemName: Swift.String {
     get
@@ -3028,9 +2805,7 @@ public struct SDKConfiguration : Swift.Codable {
   public var useImperialUnits: Swift.Bool?
   public var useToast: Swift.Bool?
   public var vinUnavailable: Swift.Bool?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(id: Foundation.UUID = UUID(), devSettingsPairs: [Swift.String : Swift.String] = [:], autoRequestVehicleObject: Swift.Bool? = true, useImperialUnits: Swift.Bool? = false, useToast: Swift.Bool? = false, vinUnavailable: Swift.Bool? = false)
-  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
