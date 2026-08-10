@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios15.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name RepairClubSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Combine
 import CommonCrypto
 import CoreBluetooth
@@ -563,44 +563,6 @@ public struct DeviceItem : Swift.Identifiable, Swift.Hashable, Swift.Codable, Sw
     get
   }
   public init(from decoder: any Swift.Decoder) throws
-}
-public struct FreezeFrameDTCResult {
-  public let ecuReplyAddress: Swift.String
-  public let frameIndexHex: Swift.String
-  public let rawDataField: Swift.String
-  public let rawHex: Swift.String
-  public let decodedDTC: Swift.String?
-  public let duration: Foundation.TimeInterval
-}
-public struct FreezeFrameSnapshotResult {
-  public let troubleCode: RepairClubSDK.TroubleCodeEntry?
-  public let samples: [RepairClubSDK.VehicleDataSample]
-  public let isEmptyFrame: Swift.Bool
-  public let duration: Foundation.TimeInterval
-}
-public struct FunctionalTroubleCodeResult {
-  public let mode: Swift.String
-  public let ecuReplyAddress: Swift.String
-  public let rawDataField: Swift.String
-  public let troubleCode: RepairClubSDK.TroubleCodeEntry
-  public let duration: Foundation.TimeInterval
-}
-public enum FrameRequestMode {
-  case burst
-  case sequential
-  case earlyExit
-  case streaming
-  public static func == (a: RepairClubSDK.FrameRequestMode, b: RepairClubSDK.FrameRequestMode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum FreezeFrameUpdate {
-  case values([RepairClubSDK.ValueMonitor])
-  case unsupported
-  case completed
-  case unavailable
 }
 public struct ErrorEntry : Swift.Identifiable, Swift.Codable, Swift.Hashable, Swift.Sendable {
   public var id: Swift.String
@@ -1284,23 +1246,6 @@ public struct ConfigLog : Swift.Identifiable, Swift.Codable {
 extension RepairClubSDK.ConfigLog : Swift.Equatable {
   public static func == (lhs: RepairClubSDK.ConfigLog, rhs: RepairClubSDK.ConfigLog) -> Swift.Bool
 }
-public struct BusLog : Swift.Identifiable, Swift.Codable {
-  public var id: Foundation.UUID
-  public var sessionID: Swift.String
-  public var date: Foundation.Date
-  public var busDetailsReceived: [Swift.String]
-  public var busEstablishSent: [Swift.String]
-  public var busNumberReceived: [Swift.String]
-  public var messages: [Swift.String]
-  public var errorsReceived: [Swift.String]
-  public var errorsInternal: [Swift.String]
-  public typealias ID = Foundation.UUID
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension RepairClubSDK.BusLog : Swift.Equatable {
-  public static func == (lhs: RepairClubSDK.BusLog, rhs: RepairClubSDK.BusLog) -> Swift.Bool
-}
 public struct BleLog : Swift.Identifiable, Swift.Codable {
   public var id: Foundation.UUID
   public var sessionID: Foundation.UUID
@@ -1605,6 +1550,8 @@ public enum SampleVehicle : Swift.String, Swift.Codable, Swift.CaseIterable {
   case subaruCrosstrek2024
   case toyotaCamry2011
   case chevroletSilverado2021
+  case chevroletSilveradoHD2019
+  case gmcSierraHD2024
   case dodgeJourney2017
   case cadillacEscalade2021
   case hondaAccord2010
@@ -1791,6 +1738,23 @@ public struct SupportTask {
     get
   }
   public init(code: Swift.String)
+}
+public struct BusLog : Swift.Identifiable, Swift.Codable {
+  public var id: Foundation.UUID
+  public var sessionID: Swift.String
+  public var date: Foundation.Date
+  public var busDetailsReceived: [Swift.String]
+  public var busEstablishSent: [Swift.String]
+  public var busNumberReceived: [Swift.String]
+  public var messages: [Swift.String]
+  public var errorsReceived: [Swift.String]
+  public var errorsInternal: [Swift.String]
+  public typealias ID = Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension RepairClubSDK.BusLog : Swift.Equatable {
+  public static func == (lhs: RepairClubSDK.BusLog, rhs: RepairClubSDK.BusLog) -> Swift.Bool
 }
 public struct TechTip : Swift.Codable, Swift.Identifiable, Swift.Hashable, Swift.Sendable {
   public var id: Foundation.UUID
@@ -2164,6 +2128,44 @@ public class ObservableArray<T> : Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
+public struct FreezeFrameDTCResult {
+  public let ecuReplyAddress: Swift.String
+  public let frameIndexHex: Swift.String
+  public let rawDataField: Swift.String
+  public let rawHex: Swift.String
+  public let decodedDTC: Swift.String?
+  public let duration: Foundation.TimeInterval
+}
+public struct FreezeFrameSnapshotResult {
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry?
+  public let samples: [RepairClubSDK.VehicleDataSample]
+  public let isEmptyFrame: Swift.Bool
+  public let duration: Foundation.TimeInterval
+}
+public struct FunctionalTroubleCodeResult {
+  public let mode: Swift.String
+  public let ecuReplyAddress: Swift.String
+  public let rawDataField: Swift.String
+  public let troubleCode: RepairClubSDK.TroubleCodeEntry
+  public let duration: Foundation.TimeInterval
+}
+public enum FrameRequestMode {
+  case burst
+  case sequential
+  case earlyExit
+  case streaming
+  public static func == (a: RepairClubSDK.FrameRequestMode, b: RepairClubSDK.FrameRequestMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FreezeFrameUpdate {
+  case values([RepairClubSDK.ValueMonitor])
+  case unsupported
+  case completed
+  case unavailable
+}
 public protocol ConnectionDelegate : AnyObject {
   func handleDisconnection()
   func handleDeviceConnection()
@@ -2463,6 +2465,7 @@ public struct RepairClubAPIResponse : Swift.Codable {
   public let payload: Swift.String?
   public let opId: Swift.Int?
   public let sqlUpdates: [Swift.String]?
+  public var httpStatus: Swift.Int?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2862,8 +2865,6 @@ extension RepairClubSDK.FirmwareReleaseType : Swift.RawRepresentable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.Equatable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.Hashable {}
 extension RepairClubSDK.VehiclePowertrainType : Swift.RawRepresentable {}
-extension RepairClubSDK.FrameRequestMode : Swift.Equatable {}
-extension RepairClubSDK.FrameRequestMode : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.Equatable {}
 extension RepairClubSDK.ErrorLevel : Swift.Hashable {}
 extension RepairClubSDK.ErrorLevel : Swift.RawRepresentable {}
@@ -2930,6 +2931,8 @@ extension RepairClubSDK.VehicleDataValueFormat : Swift.RawRepresentable {}
 extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
 extension UIKit.UIDevice.ScreenType : Swift.Hashable {}
 extension UIKit.UIDevice.ScreenType : Swift.RawRepresentable {}
+extension RepairClubSDK.FrameRequestMode : Swift.Equatable {}
+extension RepairClubSDK.FrameRequestMode : Swift.Hashable {}
 extension RepairClubSDK.DeviceDataMode : Swift.Equatable {}
 extension RepairClubSDK.DeviceDataMode : Swift.Hashable {}
 extension RepairClubSDK.TestRunResult : Swift.Equatable {}
