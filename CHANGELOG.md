@@ -10,7 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.7.0] - 2026-05-15
+## [1.7.0] - 2026-09-17 - Beta 1
+### Added
+- Adds new session event logging
+- Adds hardward voltage support where supported
+- Adds device LED configuration where supported
+### Fixed
+- Fixed modules result tx address bug
+
+---
+
+## [1.7.0] - 2026-08-10
 ### Added
 - Added support for new BLE firmware
 ### Fixed
