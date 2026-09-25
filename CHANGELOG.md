@@ -10,7 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.7.0] - 2026-09-17 - Beta 1
+## [1.7.1] - 
+### Added
+- 
+### Fixed
+- 
+
+---
+
+## [1.7.0] - 2026-09-17
 ### Added
 - Adds new session event logging
 - Adds hardward voltage support where supported
