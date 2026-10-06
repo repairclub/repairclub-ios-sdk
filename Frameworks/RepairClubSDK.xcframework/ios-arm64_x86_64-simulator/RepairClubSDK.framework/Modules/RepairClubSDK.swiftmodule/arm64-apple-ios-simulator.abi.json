@@ -132087,21 +132087,21 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "StringLiteral",
-      "offset": 1015,
+      "offset": 989,
       "length": 20,
       "value": "\"pro.repairclub.sdk\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "StringLiteral",
-      "offset": 1047,
+      "offset": 1021,
       "length": 20,
       "value": "\"ReadinessHandler::\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Models\/ReadinessHandler.swift",
       "kind": "Array",
-      "offset": 1182,
+      "offset": 1156,
       "length": 2,
       "value": "[]"
     },
@@ -132640,35 +132640,35 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 165330,
+      "offset": 165148,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 165360,
+      "offset": 165178,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 168945,
+      "offset": 168763,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 169075,
+      "offset": 168893,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/CurrentSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 169105,
+      "offset": 168923,
       "length": 5,
       "value": "false"
     },
@@ -138942,7 +138942,7 @@
       "kind": "StringLiteral",
       "offset": 2331,
       "length": 5,
-      "value": "\"788\""
+      "value": "\"790\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/DeviceManager.swift",
@@ -148159,119 +148159,119 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "FloatLiteral",
-      "offset": 18200,
+      "offset": 18223,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 19964,
+      "offset": 19987,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 20760,
+      "offset": 20783,
       "length": 5,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 21419,
+      "offset": 21442,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "Array",
-      "offset": 23201,
+      "offset": 23224,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "Array",
-      "offset": 23270,
+      "offset": 23293,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "Array",
-      "offset": 23309,
+      "offset": 23332,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 23393,
+      "offset": 23416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 23437,
+      "offset": 23460,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "StringLiteral",
-      "offset": 23511,
+      "offset": 23534,
       "length": 5,
       "value": "\"Any\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 30206,
+      "offset": 30229,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 32175,
+      "offset": 32229,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 37452,
+      "offset": 37506,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 44010,
+      "offset": 44064,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 44042,
+      "offset": 44096,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "StringLiteral",
-      "offset": 44194,
+      "offset": 44248,
       "length": 40,
       "value": "\"Error: Failed to find session for scan\""
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/Managers\/RepairClubManager.swift",
       "kind": "FloatLiteral",
-      "offset": 65317,
+      "offset": 65376,
       "length": 3,
       "value": "3.0"
     },
@@ -163762,21 +163762,21 @@
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 28955,
+      "offset": 29239,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 32015,
+      "offset": 32299,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ryancummins\/Developer\/RepairClubProject\/Framework\/RepairClubSDK\/RepairClubSDK\/CoreObjects\/BusSyncCoordinator.swift",
       "kind": "BooleanLiteral",
-      "offset": 32044,
+      "offset": 32328,
       "length": 5,
       "value": "false"
     },

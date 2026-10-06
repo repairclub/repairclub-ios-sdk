@@ -12,9 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.1] - 
 ### Added
-- 
+- Support for new firmware
+- Support for new hardware voltage
+- Support for improved connection detail
+- Support for searching for device using distance filters
 ### Fixed
-- 
+- BLE bugs
 
 ---
 
